@@ -54,7 +54,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             // the molecular Hydrogen ground state energy.
 
             #region Building the Hydrogen Hamiltonian through orbital integrals
-            /* 
+
             // One of the simplest representations of Hydrogen uses only two 
             // molecular orbitals indexed by `0` and `1`.
             var nOrbitals = 2;
@@ -99,18 +99,6 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             hamiltonian.NElectrons = nElectrons;
             hamiltonian.EnergyOffset = energyOffset;
             hamiltonian.AddFermionTerm(orbitalIntegrals);
-            */
-
-            // This is the name of the file we want to load
-            var filename = "h4_sto6g_0.000.yaml";
-
-            // This constructs the `FermionHamiltonian` from `Broombridge` format.
-            var hamiltonian = FermionHamiltonian.LoadFromYAML($@"{filename}").Single();
-
-            // Note that the `LoadFromYAML` schema returns a list of `FermionHamiltonian` 
-            // instances as the file might describe multiple Hamiltonians. 
-            // In this example, there is only one Hamiltonian. 
-            // So we use `.Single()`, which selects the first element of the list.
 
             // These orbital integral terms are automatically expanded into
             // spin-orbitals. We may print the Hamiltonian to see verify what it contains.
@@ -139,9 +127,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             {
                 // This Jordan-Wigner data structure also contains a representation 
                 // of the Hamiltonian made for consumption by the Q# algorithms.
-                var state = "|G>";
-
-                var qSharpData = jordanWignerEncoding.QSharpData(state);
+                var qSharpData = jordanWignerEncoding.QSharpData();
 
                 // We specify the bits of precision desired in the phase estimation 
                 // algorithm
@@ -164,7 +150,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
                     // Name shold make clear that it does it by trotterized
                     var (phaseEst, energyEst) = GetEnergyByTrotterization.Run(qsim, qSharpData, bits, trotterStep, trotterOrder).Result;
 
-                    Console.WriteLine($"Rep #{i + 1}/5: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
+                    Console.WriteLine($"Rep #{i+1}/5: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
                 }
                 Console.WriteLine("----- End Performing quantum energy estimation by Trotter simulation algorithm\n");
 
@@ -175,7 +161,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
                     // Name shold make clear that it does it by trotterized
                     var (phaseEst, energyEst) = GetEnergyByQubitization.Run(qsim, qSharpData, bits).Result;
 
-                    Console.WriteLine($"Rep #{i + 1}/1: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
+                    Console.WriteLine($"Rep #{i+1}/1: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
                 }
                 Console.WriteLine("----- End Performing quantum energy estimation by Qubitization simulation algorithm\n");
             }
