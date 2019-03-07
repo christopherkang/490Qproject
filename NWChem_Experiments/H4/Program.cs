@@ -105,6 +105,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             var filename = "h4_sto6g_0.000.yaml";
 
             // This constructs the `FermionHamiltonian` from `Broombridge` format.
+            Console.Write(FermionHamiltonian.LoadFromYAML($@"{filename}"));
             var hamiltonian = FermionHamiltonian.LoadFromYAML($@"{filename}").Single();
 
             // Note that the `LoadFromYAML` schema returns a list of `FermionHamiltonian` 
@@ -115,7 +116,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             // These orbital integral terms are automatically expanded into
             // spin-orbitals. We may print the Hamiltonian to see verify what it contains.
             Console.WriteLine("----- Print Hamiltonian");
-            Console.Write(hamiltonian);
+            // Console.Write(hamiltonian);
             Console.WriteLine("----- End Print Hamiltonian \n");
             #endregion
 
