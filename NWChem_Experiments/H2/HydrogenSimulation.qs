@@ -34,6 +34,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen {
         // The data describing the Hamiltonian for all these steps is contained in
         // `qSharpData`
         let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = qSharpData!;
+        Message($"{fermionTermData}");
         
         // We use a Product formula, also known as `Trotterization` to
         // simulate the Hamiltonian.

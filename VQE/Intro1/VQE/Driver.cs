@@ -47,9 +47,14 @@ namespace VQE
             // convert the hamiltonian into it's JW Encoding
             var JWEncoding = JordanWignerEncoding.Create(hamiltonian);
 
+            var data = JWEncoding.QSharpData();
+
             Console.WriteLine("----- Print Hamiltonian");
-            Console.Write(hamiltonian);
+            Console.Write(data);
             Console.WriteLine("----- End Print Hamiltonian \n");
+
+            #endregion
+            #region Convert Q# Hamiltonian
 
             #endregion
             #region Hybrid Quantum/Classical accelerator
@@ -57,7 +62,8 @@ namespace VQE
             Console.WriteLine("----- Begin VQE Simulation");
             using (var qsim = new QuantumSimulator())
             {
-                HelloQ.Run(qsim).Wait();
+                // Simulate.Run(qsim).Wait();
+                Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
             }
             #endregion 
             #region Classical update scheme
