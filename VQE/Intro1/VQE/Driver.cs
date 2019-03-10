@@ -60,10 +60,18 @@ namespace VQE
             #region Hybrid Quantum/Classical accelerator
             // Feed created state and hamiltonian terms to VQE
             Console.WriteLine("----- Begin VQE Simulation");
+
+            var N = 10; // number of qubits, calculate from data???
+            var oneReal = (1.0, 0.0);
+            var inputCoeffs = new ComplexPolar[N];
+            for (int i =  0; i < Length(inputCoeffs) - 1; i++) {
+                inputCoeffs[i] = oneReal;
+            }
             using (var qsim = new QuantumSimulator())
             {
                 // Simulate.Run(qsim).Wait();
                 // Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
+                // Console.WriteLine(Simulate.Run(qsim, data, 1.0, 0.1).Result);
                 Console.WriteLine(Simulate.Run(qsim, data, 1.0, 0.1).Result);
             }
             #endregion 

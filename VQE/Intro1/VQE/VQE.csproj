@@ -10,9 +10,9 @@
     <PackageReference Include="Microsoft.Quantum.Canon" Version="0.5.1902.2802" />
     <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.5.1902.2802" />
     <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.5.1902.2802" />
-    <!-- <PackageReference Include="Microsoft.Quantum.Canon" Version="0.4.1901.2905"/>
+    <PackageReference Include="Microsoft.Quantum.Canon" Version="0.4.1901.2905"/>
     <PackageReference Include="Microsoft.Quantum.Chemistry" Version="0.4.1901.2905"/>
-    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.4.1901.2905"/> -->
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.4.1901.2905"/>
 
   </ItemGroup>
 
