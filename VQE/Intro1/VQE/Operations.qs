@@ -64,7 +64,7 @@ namespace VQE
 
     // we need a generatorset with GeneratorIndex => (Qubit => Unit)[]  
 
-    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Double[][] {
+    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double, initCoeffs : ComplexPolar[]) : Double[][] {
         Message("BEGINNING SIMULATION");
 
         let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
@@ -91,7 +91,9 @@ namespace VQE
                 // let initial_oracle = Rx(4.0 * PI() * phi, _);
 
                 // let initial_oracle = NoOp<Qubit[]>;
-                let initial_oracle = PrepareTrialState(statePrepData, _);
+                // let initial_oracle = PrepareTrialState(statePrepData, _);
+                //let initial_oracle = NoOp<Qubit[]>;
+                let initial_oracle = prepareStateHelper(initCoeffs, _);
                 
                 // create an energy estimate
                 let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe) + energyOffset;
@@ -122,6 +124,11 @@ namespace VQE
         Message($"Ground energy: {ground_energy}");
         Message($"Ground state: {ground_phase}");
         return out_val;
+    }
+
+    // help that allows for the use of PrepareArbitraryState where oracle is expected
+    operation prepareStateHelper (coeffs : ComplexPolar[], qs : Qubit[]) : Unit {
+        PrepareArbitraryState(coeffs, BigEndian(qs));
     }
 
     // operation make_terms (data : GeneratorSystem, index : Int) : ((Qubit[] => Unit : Adjoint, Controlled), (Pauli[]), Double) {
