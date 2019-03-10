@@ -49,9 +49,9 @@ namespace VQE
 
             var data = JWEncoding.QSharpData();
 
-            Console.WriteLine("----- Print Hamiltonian");
-            Console.Write(data);
-            Console.WriteLine("----- End Print Hamiltonian \n");
+            // Console.WriteLine("----- Print Hamiltonian");
+            // Console.Write(data);
+            // Console.WriteLine("----- End Print Hamiltonian \n");
 
             #endregion
             #region Convert Q# Hamiltonian
@@ -63,7 +63,8 @@ namespace VQE
             using (var qsim = new QuantumSimulator())
             {
                 // Simulate.Run(qsim).Wait();
-                Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
+                // Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
+                Console.WriteLine(Simulate.Run(qsim, data, 1.0, 0.1).Result);
             }
             #endregion 
             #region Classical update scheme

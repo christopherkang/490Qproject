@@ -7,23 +7,20 @@ namespace VQE
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Extensions.Math;
-    open Microsoft.Quantum.Chemistry.JordanWigner; 
     open Microsoft.Quantum.Chemistry;
+    open Microsoft.Quantum.Chemistry.JordanWigner; 
+    open MultiUnitary;
 
-    operation arbitrary_test(data : JordanWignerEncodingData) : ((Int[], Double[]), Int[]) {
-        let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
-        // Message($"{prep_gateset(fermionTermData)}");
-        // return prep_gateset(fermionTermData);
-        // let ((gates, phases), targets) = (TrotterStepOracle(data))!;
-        // return ((gates, phases), targets);
-        // return (TrotterStepOracle(data))!;
-    }
+    // operation arbitrary_test(data : JordanWignerEncodingData) : ((Int[], Double[]), Int[]) {
+    //     let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
+    //     // Message($"{prep_gateset(fermionTermData)}");
+    //     // return prep_gateset(fermionTermData);
+    //     // let ((gates, phases), targets) = (TrotterStepOracle(data))!;
+    //     // return ((gates, phases), targets);
+    //     // return (TrotterStepOracle(data))!;
+    // }
 
-    operation main(data : JordanWignerEncodingData) : Double[][] {
-        mutable out_val = new Double[][2];
-    }
-
-    operation create_generator (qSharpData : JordanWignerEncodingData) : EvolutionGenerator {
+    operation create_generator (qSharpData : JordanWignerEncodingData) : (GeneratorSystem, Int) {
         
         // Depack the data from the JWEncoding
         // We really only need the fermionic info
@@ -38,7 +35,7 @@ namespace VQE
         // specific h-terms to be mapped with their Pauli equivalents (as defined in the evolutionset)
         // FLAG - BELIEVE THAT THE JWFERMIONEVOLUTIONSET SHOULD NOT BE USED
         // A CUSTOM MADE ONE SHOULD BE USED, INSTEAD
-        let evolutionGenerator = EvolutionGenerator(JordanWignerFermionEvolutionSet(), generatorSystem);
+        // let evolutionGenerator = EvolutionGenerator(JordanWignerFermionEvolutionSet(), generatorSystem);
 
         // let (evolutionSet, generator) = evolutionGenerator!; 
         // split into the generatorIndex => EvolutionUnitary and Int, Int => generatorIndex 
@@ -61,31 +58,52 @@ namespace VQE
         // let rescaleFactor = 1.0 / trotterStepSize;
         // return generatorIndex;
         // Message($"{generatorIndex}");
-        return evolutionGenerator;
+        // return evolutionGenerator;
+        return (generatorSystem, nSpinOrbitals);
     }
 
-    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Unit {
+    // we need a generatorset with GeneratorIndex => (Qubit => Unit)[]  
+
+    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Double[][] {
         Message("BEGINNING SIMULATION");
+
+        // output matrix with (precision, energy level) pairs
+        mutable out_val = new Double[][2];
 
         // Create the main data source (EvolutionGenerator) with which to feed the VQE
         // This contains the data needed to construct specific terms
-        let ham_terms = create_generator(data);
-
-        mutable out_val = 0.0;
+        let (ham_terms, nOrbitals) = create_generator(data);
+    
         mutable ground_energy = 1000.0;
         mutable ground_phase = 3.0;
+        mutable index = 0;
 
-        using (testQ = Qubit()) {
+        using (testQ = Qubit[nOrbitals]) {
             mutable phi = 0.0;
             repeat {
                 Message($"Testing phase: {phi}");
-                let initial_oracle = Rx(4.0 * PI() * phi, _);
+
+                // create the oracle that creates the initial state
+                // let initial_oracle = Rx(4.0 * PI() * phi, _);
+
+                let initial_oracle = NoOp<Qubit[]>;
+                
+                // create an energy estimate
                 let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe);
-                set phi = phi + precision;
+                
+                // set the specific row to have the initial state given + the energy prediction
+                set out_val[index] = [phi, discovered_energy];
+
+                // if the energy found is lower than the previous low
                 if (discovered_energy < ground_energy) {
+
+                    // reset the low energy amount + reset the low energy parameter
                     set ground_energy = discovered_energy;
                     set ground_phase = phi;
                 }
+
+                // increase the angle
+                set phi = phi + precision;
             } until (phi > 2.0)
             fixup {
 
@@ -93,17 +111,20 @@ namespace VQE
         }
         Message($"Ground energy: {ground_energy}");
         Message($"Ground state: {ground_phase}");
+        return out_val;
     }
 
-    operation make_terms (data : EvolutionGenerator, index : Int) : ((Qubit[] => Unit : Adjoint, Controlled), (Pauli[]), Double) {
-        // FLAG: MAKE THIS OPERATION WHICH GOES THROUGH THE EVOLUTION GENERATOR AND CREATES 
-        // THE NECESSARY GATE COMBOS + PAULI BASES TO USE FOR THE FUTURE METHODS
-    }
+    // operation make_terms (data : GeneratorSystem, index : Int) : ((Qubit[] => Unit : Adjoint, Controlled), (Pauli[]), Double) {
+    //     // FLAG: MAKE THIS OPERATION WHICH GOES THROUGH THE EVOLUTION GENERATOR AND CREATES 
+    //     // THE NECESSARY GATE COMBOS + PAULI BASES TO USE FOR THE FUTURE METHODS
+
+    //     // FLAG: IT MAY BE EASIER TO JUST CREATE A SEPARATE QSHARP MODULE TO HANDLE DEALING WITH ALL OF THIS
+    // }
 
 
     operation SumExpectedValues(initial_oracle : (Qubit[] => Unit), 
-                                HamiltonianGates : EvolutionGenerator, 
-                                ancilla[] : Qubit, moe : Double) : Double {
+                                HamiltonianGates : GeneratorSystem, 
+                                ancilla : Qubit[], moe : Double) : Double {
         // Sum the total expected values over all terms of a hamiltonian 
         // with a given oracle that produces the starting state
 
@@ -111,17 +132,41 @@ namespace VQE
         mutable total = 0.0;
 
         // we need to unpack the evolutionSet to use and the generator
-        let (evolutionSet, generator) = (HamiltonianGates)!;
+        // let (evolutionSet, generator) = (HamiltonianGates)!;
 
         // we extract the total number of terms and the indexing function
-        let (num_of_terms, jw_term_indexer) = (generator)!;
+        let (num_of_terms, jw_term_indexer) = (HamiltonianGates)!;
 
         // we now iterate through each of the terms
         for (i in 0..num_of_terms - 1) {
             // and take the specified term (which is of type GeneratorIndex)
             let jw_term = jw_term_indexer(i);
-            let (gate_set, basis, weight) = make_terms(HamiltonianGates, i);
-            set total = total + weight * FindExpectedValue(initial_oracle, gate_set, basis, ancilla, moe);
+
+            // create a list of unitaries to apply
+            // FLAG - TO CREATE IN METHOD
+            // let gates = (customSet!(jw_term))!;
+
+            // // for each gate we need to use
+            // for (unitary in 0..Length(gates) - 1) {
+
+            // }
+            
+            // let (gate_set, basis, weight) = make_terms(HamiltonianGates, i);
+            let gate_basis_pairs = CreatePauliSet(jw_term, ancilla);
+
+            // for each gate combo we have
+            for (gate_combo in 0..Length(gate_basis_pairs) - 1) {
+
+                // extract the gate to evaluate and the basis to use
+                let (gate_to_evaluate, basis) = gate_basis_pairs[gate_combo];
+
+                // also get the weight
+                let ((gate_keys, weight), targets) = jw_term!;
+
+                // multiply the expected value by the weight
+                // set total = total + weight[gate_combo] * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
+                set total = total + weight[0] * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
+            }
         }
         return total;
     }
@@ -182,6 +227,8 @@ namespace VQE
         // given an oracle to create an arbitrary state, 
         // let us identify the expecatation value of the state with an arbitrary gate
         // and the gate's basis 
+
+        // Message($"LENGTHS: {Length(basis)}, {Length(ancilla)}");
 
         // prepare the sample eigenstate
         InitialStateOracle(ancilla);
