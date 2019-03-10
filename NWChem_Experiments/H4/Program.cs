@@ -2,6 +2,8 @@
 // Licensed under the MIT License.
 
 #region Using Statements
+
+using Microsoft.Quantum.Simulation.Core;
 // We will need several different libraries in this sample.
 // Here, we expose these libraries to our program using the
 // C# "using" statement, similar to the Q# "open" statement.
@@ -34,6 +36,8 @@ using Microsoft.Extensions.Logging;
 
 // We use this for convnience functions for manipulation arrays.
 using System.Linq;
+
+
 #endregion
 
 namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
@@ -170,14 +174,14 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
                 Console.WriteLine("----- End Performing quantum energy estimation by Trotter simulation algorithm\n");
 
                 Console.WriteLine("----- Performing quantum energy estimation by Qubitization simulation algorithm");
-                for (int i = 0; i < 1; i++)
-                {
-                    // EstimateEnergyByTrotterization
-                    // Name shold make clear that it does it by trotterized
-                    var (phaseEst, energyEst) = GetEnergyByQubitization.Run(qsim, qSharpData, bits).Result;
+                // for (int i = 0; i < 1; i++)
+                // {
+                //     // EstimateEnergyByTrotterization
+                //     // Name shold make clear that it does it by trotterized
+                //     var (phaseEst, energyEst) = GetEnergyByQubitization.Run(qsim, qSharpData, bits).Result;
 
-                    Console.WriteLine($"Rep #{i + 1}/1: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
-                }
+                //     Console.WriteLine($"Rep #{i + 1}/1: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
+                // }
                 Console.WriteLine("----- End Performing quantum energy estimation by Qubitization simulation algorithm\n");
             }
 

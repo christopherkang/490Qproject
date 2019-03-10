@@ -424,10 +424,10 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.Quantum.Canon/0.3.1811.203-preview": {
+      "Microsoft.Quantum.Canon/0.5.1902.2802": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Quantum.Development.Kit": "0.3.1811.203-preview"
+          "Microsoft.Quantum.Development.Kit": "0.5.1902.2802"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Quantum.Canon.dll": {}
@@ -436,15 +436,15 @@
           "lib/netstandard2.0/Microsoft.Quantum.Canon.dll": {}
         }
       },
-      "Microsoft.Quantum.Chemistry/0.3.1811.203-preview": {
+      "Microsoft.Quantum.Chemistry/0.5.1902.2802": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging": "2.1.1",
           "Microsoft.Extensions.Logging.Console": "2.1.1",
           "Microsoft.Extensions.Logging.Debug": "2.1.1",
           "Microsoft.NET.Test.Sdk": "15.7.0",
-          "Microsoft.Quantum.Canon": "0.3.1811.203-preview",
-          "Microsoft.Quantum.Development.Kit": "0.3.1811.203-preview",
+          "Microsoft.Quantum.Canon": "0.5.1902.2802",
+          "Microsoft.Quantum.Development.Kit": "0.5.1902.2802",
           "Serilog.Extensions.Logging.File": "1.1.0",
           "YamlDotNet": "5.0.1",
           "xunit.abstractions": "2.0.1",
@@ -459,27 +459,31 @@
           "lib/netstandard2.0/Microsoft.Quantum.Chemistry.Runtime.dll": {}
         }
       },
-      "Microsoft.Quantum.Development.Kit/0.3.1811.203-preview": {
+      "Microsoft.Quantum.Development.Kit/0.5.1902.2802": {
         "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.QsCompilerCommon.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Simulators.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.QsCompilerCommon.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll": {},
-          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Simulators.dll": {}
+        "dependencies": {
+          "Microsoft.Quantum.Simulators": "0.5.1902.2802"
         },
         "build": {
           "build/Microsoft.Quantum.Development.Kit.props": {},
           "build/Microsoft.Quantum.Development.Kit.targets": {}
+        }
+      },
+      "Microsoft.Quantum.Simulators/0.5.1902.2802": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulators.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll": {},
+          "lib/netstandard2.0/Microsoft.Quantum.Simulators.dll": {}
         },
         "runtimeTargets": {
           "runtimes/linux-x64/native/Microsoft.Quantum.Simulator.Runtime.dll": {
@@ -2615,22 +2619,22 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Quantum.Canon/0.3.1811.203-preview": {
-      "sha512": "/YgvcrzPV3GeXjHByyENd9LQ6SZE66whrZhw8J8AemJgZEyA5fKokz0BV15sduuxofwMKejzB2NY69wu/IR6Nw==",
+    "Microsoft.Quantum.Canon/0.5.1902.2802": {
+      "sha512": "d010MyOHlTpY3VsmSWQ4SvWZJsXZf15B93EYILNPw8qaZksq4a3cnIKHP8D9jSNvNre/ubNpyNqyB1OhBV3EaA==",
       "type": "package",
-      "path": "microsoft.quantum.canon/0.3.1811.203-preview",
+      "path": "microsoft.quantum.canon/0.5.1902.2802",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Quantum.Canon.dll",
-        "microsoft.quantum.canon.0.3.1811.203-preview.nupkg.sha512",
+        "microsoft.quantum.canon.0.5.1902.2802.nupkg.sha512",
         "microsoft.quantum.canon.nuspec"
       ]
     },
-    "Microsoft.Quantum.Chemistry/0.3.1811.203-preview": {
-      "sha512": "9xjTy6AE0rjRwNbd/nFunbGuQbVYPY2sweR8R2n1SJZUpsGVDc+BZUUvyw4B2wLqrmF+YJIB14FP7+dsg/c3Jw==",
+    "Microsoft.Quantum.Chemistry/0.5.1902.2802": {
+      "sha512": "tEEQCcWMS4QXj8kQ6kf6lSYxfGRgK0EhDcHhb71SN6ESxBsaXL10oYBD8vngHoTgIaCKLGY1JxEm5fW5Iyp/Hg==",
       "type": "package",
-      "path": "microsoft.quantum.chemistry/0.3.1811.203-preview",
+      "path": "microsoft.quantum.chemistry/0.5.1902.2802",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2639,36 +2643,25 @@
         "lib/netstandard2.0/Microsoft.Quantum.Chemistry.Runtime.deps.json",
         "lib/netstandard2.0/Microsoft.Quantum.Chemistry.Runtime.dll",
         "lib/netstandard2.0/Microsoft.Quantum.Chemistry.Runtime.xml",
-        "microsoft.quantum.chemistry.0.3.1811.203-preview.nupkg.sha512",
+        "microsoft.quantum.chemistry.0.5.1902.2802.nupkg.sha512",
         "microsoft.quantum.chemistry.nuspec"
       ]
     },
-    "Microsoft.Quantum.Development.Kit/0.3.1811.203-preview": {
-      "sha512": "kkze/VuiR2dE1OFpGPDpUVqCDby76+5L7OzSVIuBFDKfvV6IanR3OYFVNVTCZmaTqHETRFw5h6W4ZdpD6fTBAg==",
+    "Microsoft.Quantum.Development.Kit/0.5.1902.2802": {
+      "sha512": "AxYWz1HfGZlb1cV8Rn87JNRr61DhgQF84nmkC3ce+qFie//9WdvUv2g9M6sbqOruAd5mwvHR4DxKWDwHjExeFA==",
       "type": "package",
-      "path": "microsoft.quantum.development.kit/0.3.1811.203-preview",
+      "path": "microsoft.quantum.development.kit/0.5.1902.2802",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "ThirdPartyNotice.txt",
         "build/Microsoft.Quantum.Development.Kit.props",
         "build/Microsoft.Quantum.Development.Kit.targets",
         "build/QSharp.ProjectItemsSchema.xaml",
         "build/QSharp.xaml",
-        "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll",
-        "lib/netstandard2.0/Microsoft.Quantum.QsCompilerCommon.dll",
-        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll",
-        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll",
-        "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll",
-        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Simulators.deps.json",
-        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Simulators.dll",
-        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Simulators.xml",
-        "microsoft.quantum.development.kit.0.3.1811.203-preview.nupkg.sha512",
+        "microsoft.quantum.development.kit.0.5.1902.2802.nupkg.sha512",
         "microsoft.quantum.development.kit.nuspec",
-        "runtimes/linux-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
-        "runtimes/osx-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
-        "runtimes/win-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
-        "runtimes/win-x64/native/vcomp140.dll",
         "tools/qsc/CommandLine.dll",
         "tools/qsc/FParsec.dll",
         "tools/qsc/FParsecCS.dll",
@@ -2813,6 +2806,27 @@
         "tools/qsc/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
         "tools/qsc/zh-Hant/Microsoft.VisualStudio.Threading.resources.dll",
         "tools/qsc/zh-Hant/Microsoft.VisualStudio.Validation.resources.dll"
+      ]
+    },
+    "Microsoft.Quantum.Simulators/0.5.1902.2802": {
+      "sha512": "+a6OpzRpQ9HjhsNV0iWNxdfBfFjWXvzNyxVO0NWSTXRFHzI3a/TniIfwaYLgxIfN+6ByxA3WAO7Isiq/qsOOsQ==",
+      "type": "package",
+      "path": "microsoft.quantum.simulators/0.5.1902.2802",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Quantum.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Common.dll",
+        "lib/netstandard2.0/Microsoft.Quantum.Simulation.Core.dll",
+        "lib/netstandard2.0/Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.dll",
+        "lib/netstandard2.0/Microsoft.Quantum.Simulators.dll",
+        "lib/netstandard2.0/Microsoft.Quantum.Simulators.xml",
+        "microsoft.quantum.simulators.0.5.1902.2802.nupkg.sha512",
+        "microsoft.quantum.simulators.nuspec",
+        "runtimes/linux-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
+        "runtimes/osx-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
+        "runtimes/win-x64/native/Microsoft.Quantum.Simulator.Runtime.dll",
+        "runtimes/win-x64/native/vcomp140.dll"
       ]
     },
     "Microsoft.TestPlatform.ObjectModel/15.7.0": {
@@ -6651,9 +6665,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
-      "Microsoft.Quantum.Canon >= 0.3.1811.203-preview",
-      "Microsoft.Quantum.Chemistry >= 0.3.1811.203-preview",
-      "Microsoft.Quantum.Development.Kit >= 0.3.1811.203-preview"
+      "Microsoft.Quantum.Canon >= 0.5.1902.2802",
+      "Microsoft.Quantum.Chemistry >= 0.5.1902.2802",
+      "Microsoft.Quantum.Development.Kit >= 0.5.1902.2802"
     ]
   },
   "packageFolders": {
@@ -6705,15 +6719,15 @@
           },
           "Microsoft.Quantum.Canon": {
             "target": "Package",
-            "version": "[0.3.1811.203-preview, )"
+            "version": "[0.5.1902.2802, )"
           },
           "Microsoft.Quantum.Chemistry": {
             "target": "Package",
-            "version": "[0.3.1811.203-preview, )"
+            "version": "[0.5.1902.2802, )"
           },
           "Microsoft.Quantum.Development.Kit": {
             "target": "Package",
-            "version": "[0.3.1811.203-preview, )"
+            "version": "[0.5.1902.2802, )"
           }
         },
         "imports": [

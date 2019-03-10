@@ -401,14 +401,22 @@ namespace MultiUnitary {
                 // return _SplitJWPQTerm_(termPR1, new Qubit[0], Exclude([qubitQidx], qubits));
                 // 
                 mutable to_process = _SplitJWPQTerm_(termPR1, new Qubit[0], Exclude([qubitQidx], qubits));
+
+                // for each gate set returned
                 for (gate_set in 0..Length(to_process) - 1) {
-                    let (given_gate, given_paulis) = to_process[0];
-                    let new_array = Exclude<Qubit>([qubitQidx], _);
+
+                    // unpack the gate set and the paulis used
+                    let (given_gate, given_paulis) = to_process[gate_set];
+
+                    // create the new array by exluding a qubit
+                    // let new_array = Exclude<Qubit>([qubitQidx], _);
                     // let new_oracle = package([qubitQidx], given_gate, _);
-                    let new_oracle = given_gate(new_array(_));
+                    // let new_oracle = given_gate(new_array(_));
+                    // let new_oracle = package([qubitQidx], given_gate, _);
                     // 0, 1, 2, 3, 4, 5, 6, 7
                     // exclude 2 so our output is
                     // z, z, ,  z, z, z, z, z,
+                    let new_oracle = ApplyToSubregisterCA(given_gate, Exclude([qubitQidx], IntArrayFromRange(0..Length(qubits) - 1)), _);
                     let new_paulis = given_paulis[0..qubitQidx - 1] + [PauliI] + given_paulis[qubitQidx..Length(given_paulis) - 1];
                     set to_process[gate_set] = (new_oracle, new_paulis);
                 }
@@ -418,12 +426,39 @@ namespace MultiUnitary {
             else {
                 let termPR1 = GeneratorIndex((idxTermType, [1.0]), [0, idxFermions[3] - idxFermions[0]]);
                 // return _SplitJWPQTerm_(termPR1, [qubits[qubitQidx]], qubits[idxFermions[0] .. idxFermions[3]]);
-                return _SplitJWPQTermWithSkip2_(generatorIndex, new Qubit[0], qubits, qubitQidx);  
+                mutable to_process = _SplitJWPQTerm_(termPR1, [qubits[qubitQidx]], qubits[idxFermions[0] .. idxFermions[3]]);
+                for (gate_set in 0..Length(to_process) - 1) {
+                    let (given_gate, given_paulis) = to_process[gate_set];
+                    // let sub_qubits = Subarray<Qubit>(IntArrayFromRange(idxFermions[0]..idxFermions[3]), _);
+                    let new_oracle = ApplyToSubregisterCA(given_gate, IntArrayFromRange(idxFermions[0]..idxFermions[3]) + [qubitQidx], _);
+                    mutable new_paulis = new Pauli[Length(qubits)];
+                    set new_paulis[qubitQidx] = PauliZ;
+                    mutable counter = 0;
+                    for (pauli_index in idxFermions[0]..idxFermions[3]) {
+                        set new_paulis[pauli_index] = given_paulis[counter];
+                        set counter = counter + 1;
+                    }
+                    // let new_paulis = new Pauli[0..] + given_paulis + new Pauli[Length(qubits) - idxFermions[3] - 1];
+                    set to_process[gate_set] = (new_oracle, new_paulis);
+                }
+                // return _SplitJWPQTermWithSkip2_(generatorIndex, new Qubit[0], qubits, qubitQidx); 
+                return to_process; 
             }
         }
     }
 
     operation package(indices : Int[], gate : (Qubit[] => Unit : Adjoint, Controlled), qb : Qubit[]) : Unit {
+        body (...) {
+            // packages an exclusion function with the original operator
+            let new_array = Exclude(indices, qb);
+            gate(new_array);
+        }
+        adjoint auto;
+        controlled auto;
+        adjoint controlled auto;
+    }
+
+    operation package2(indices : Int[], gate : (Qubit[] => Unit : Adjoint, Controlled), qb : Qubit[]) : Unit {
         body (...) {
             // packages an exclusion function with the original operator
             let new_array = Exclude(indices, qb);

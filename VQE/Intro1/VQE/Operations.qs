@@ -67,6 +67,8 @@ namespace VQE
     operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Double[][] {
         Message("BEGINNING SIMULATION");
 
+        let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
+
         // output matrix with (precision, energy level) pairs
         mutable out_val = new Double[][2];
 
@@ -83,13 +85,16 @@ namespace VQE
             repeat {
                 Message($"Testing phase: {phi}");
 
+                Message($"{energyOffset}");
+
                 // create the oracle that creates the initial state
                 // let initial_oracle = Rx(4.0 * PI() * phi, _);
 
-                let initial_oracle = NoOp<Qubit[]>;
+                // let initial_oracle = NoOp<Qubit[]>;
+                let initial_oracle = PrepareTrialState(statePrepData, _);
                 
                 // create an energy estimate
-                let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe);
+                let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe) + energyOffset;
                 
                 // set the specific row to have the initial state given + the energy prediction
                 set out_val[index] = [phi, discovered_energy];
@@ -102,9 +107,14 @@ namespace VQE
                     set ground_phase = phi;
                 }
 
+                Message($"ENERGY FOUND: {discovered_energy}");
+
+                // increment the index for the output matrix
+                set index = index + 1;
+
                 // increase the angle
                 set phi = phi + precision;
-            } until (phi > 2.0)
+            } until (phi >= 2.0)
             fixup {
 
             }

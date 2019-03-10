@@ -21,7 +21,8 @@ namespace VQE
         {
             #region Parameters of Operation
             // filename of the molecule to be emulated 
-            var FILENAME = "h2_2_sto6g_1.0au.yaml";
+            // var FILENAME = "h2_2_sto6g_1.0au.yaml";
+            var FILENAME = "h4_sto6g_0.000.yaml";
 
             // use this state provided in the YAML
             var STATE = "|G>";
@@ -64,7 +65,7 @@ namespace VQE
             {
                 // Simulate.Run(qsim).Wait();
                 // Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
-                Console.WriteLine(Simulate.Run(qsim, data, 1.0, 0.1).Result);
+                Console.WriteLine(Simulate.Run(qsim, data, 1.0, 0.001).Result);
             }
             #endregion 
             #region Classical update scheme
