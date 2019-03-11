@@ -91,9 +91,9 @@ namespace VQE
                 // let initial_oracle = Rx(4.0 * PI() * phi, _);
 
                 // let initial_oracle = NoOp<Qubit[]>;
-                // let initial_oracle = PrepareTrialState(statePrepData, _);
+                let initial_oracle = PrepareTrialState(statePrepData, _);
                 //let initial_oracle = NoOp<Qubit[]>;
-                let initial_oracle = prepareStateHelper(initCoeffs, _);
+                // let initial_oracle = prepareStateHelper(initCoeffs, _);
                 
                 // create an energy estimate
                 let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe) + energyOffset;
