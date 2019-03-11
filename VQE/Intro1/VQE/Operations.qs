@@ -64,7 +64,7 @@ namespace VQE
 
     // we need a generatorset with GeneratorIndex => (Qubit => Unit)[]  
 
-    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double, initCoeffs : ComplexPolar[]) : Double[][] {
+    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Double[][] {
         Message("BEGINNING SIMULATION");
 
         let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
