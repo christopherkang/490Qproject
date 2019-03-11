@@ -106,7 +106,9 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             */
 
             // This is the name of the file we want to load
-            var filename = "h4_sto6g_0.000.yaml";
+            // var filename = "h4_sto6g_0.000.yaml";
+            var filename = "h2_2_sto6g_1.0au.yaml";
+            // var filename = "h20_nwchem.yaml";
 
             // This constructs the `FermionHamiltonian` from `Broombridge` format.
             Console.Write(FermionHamiltonian.LoadFromYAML($@"{filename}"));
@@ -174,14 +176,14 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
                 Console.WriteLine("----- End Performing quantum energy estimation by Trotter simulation algorithm\n");
 
                 Console.WriteLine("----- Performing quantum energy estimation by Qubitization simulation algorithm");
-                // for (int i = 0; i < 1; i++)
-                // {
-                //     // EstimateEnergyByTrotterization
-                //     // Name shold make clear that it does it by trotterized
-                //     var (phaseEst, energyEst) = GetEnergyByQubitization.Run(qsim, qSharpData, bits).Result;
+                for (int i = 0; i < 1; i++)
+                {
+                    // EstimateEnergyByTrotterization
+                    // Name shold make clear that it does it by trotterized
+                    var (phaseEst, energyEst) = GetEnergyByQubitization.Run(qsim, qSharpData, bits).Result;
 
-                //     Console.WriteLine($"Rep #{i + 1}/1: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
-                // }
+                    Console.WriteLine($"Rep #{i + 1}/1: Energy estimate: {energyEst}; Phase estimate: {phaseEst}");
+                }
                 Console.WriteLine("----- End Performing quantum energy estimation by Qubitization simulation algorithm\n");
             }
 

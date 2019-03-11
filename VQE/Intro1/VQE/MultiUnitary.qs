@@ -284,7 +284,7 @@ namespace MultiUnitary {
         // in this case, we need to also provide a list of paulis as the measurement basis
         let ((idxTermType, coeff), idxFermions) = generatorIndex!;
 
-        Message($"{coeff}");
+        // Message($"{coeff}");
 
         // create the basis set to return
         // mutable basis_set = new Pauli[Length(qubits)];
@@ -331,53 +331,23 @@ namespace MultiUnitary {
             // we start with our ops XX or YY and continue with ZZZZ...
             // but we only apply these operations to the ends and everything in between
             // Exp(ops[idxOp] + ConstantArray(Length(qubitsJW) + Length(extraParityQubits), PauliZ), angle, (qubitsPQ + qubitsJW) + extraParityQubits);
+            
+            // assign the above ops to be performed
             set total_gates[idxFermions[0]] = ops[idxOp][0];
             set total_gates[idxFermions[1]] = ops[idxOp][1];
+
+            // select the qubits between p/q to have Z applied
             for (qubit_index in idxFermions[0] + 1 .. idxFermions[1] - 1) { 
                 set total_gates[qubit_index] = PauliZ;
             }
+
+            // apply Z to the final qubits (the parity checks)
             for (qubit_index in Length(qubits) .. Length(total_gates) - 1) {
                 set total_gates[qubit_index] = PauliZ;
             }
+
+            //
             set out_hold = out_hold + [(ApplyPauli(total_gates, _), total_gates, 1)];
-        }
-        return out_hold;
-    }
-
-    operation _SplitJWPQTermWithSkip_(term : GeneratorIndex, extraParityQubits : Qubit[], qubits : Qubit[], skip : Int) :  ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
-        let ((idxTermType, coeff), idxFermions) = term!;
-        // let angle = (1.0 * coeff[0]) * stepSize;
-        
-        mutable out_hold = new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[0];
-
-        // pull out the qubits that matter
-        let qubitsPQ = Subarray(idxFermions[0 .. 1], qubits);
-
-        // pull out the qubits in between
-        let qubitsJW = qubits[idxFermions[0] + 1 .. idxFermions[1] - 1];
-
-        // our available operations
-        let ops = [[PauliX, PauliX], [PauliY, PauliY]];
-
-        // for both of our ops
-        for (idxOp in 0 .. Length(ops) - 1) {
-            mutable total_gates = new Pauli[Length(qubits) + Length(extraParityQubits)];
-            // we start with our ops XX or YY and continue with ZZZZ...
-            // but we only apply these operations to the ends and everything in between
-            // Exp(ops[idxOp] + ConstantArray(Length(qubitsJW) + Length(extraParityQubits), PauliZ), angle, (qubitsPQ + qubitsJW) + extraParityQubits);
-            set total_gates[idxFermions[0]] = ops[idxOp][0];
-            set total_gates[idxFermions[1]] = ops[idxOp][1];
-            for (qubit_index in idxFermions[0] + 1 .. idxFermions[1] - 1) { 
-                if (qubit_index != skip) {
-                    set total_gates[qubit_index] = PauliZ;
-                }
-            }
-            for (qubit_index in Length(qubits) .. Length(total_gates) - 1) {
-                if (qubit_index != skip) {
-                    set total_gates[qubit_index] = PauliZ;
-                }
-            }
-            set out_hold = out_hold + [(ApplyPauli(total_gates, _), total_gates)];
         }
         return out_hold;
     }
@@ -418,7 +388,11 @@ namespace MultiUnitary {
                     // 0, 1, 2, 3, 4, 5, 6, 7
                     // exclude 2 so our output is
                     // z, z, ,  z, z, z, z, z,
+
+                    // our new oracle will first cull unecessary qubits from the original size down to our new size
                     let new_oracle = ApplyToSubregisterCA(given_gate, Exclude([qubitQidx], IntArrayFromRange(0..Length(qubits) - 1)), _);
+
+                    // we also need to make sure that we measure the unaffected qubit normally
                     let new_paulis = given_paulis[0..qubitQidx - 1] + [PauliI] + given_paulis[qubitQidx..Length(given_paulis) - 1];
                     set to_process[gate_set] = (new_oracle, new_paulis, 1);
                 }
@@ -432,8 +406,14 @@ namespace MultiUnitary {
                 for (gate_set in 0..Length(to_process) - 1) {
                     let (given_gate, given_paulis, value) = to_process[gate_set];
                     // let sub_qubits = Subarray<Qubit>(IntArrayFromRange(idxFermions[0]..idxFermions[3]), _);
+
+                    // we need to shape our array so that the last qubit is our parity and the first ones are our body
                     let new_oracle = ApplyToSubregisterCA(given_gate, IntArrayFromRange(idxFermions[0]..idxFermions[3]) + [qubitQidx], _);
+                    
+                    // new pauli strings
                     mutable new_paulis = new Pauli[Length(qubits)];
+
+                    // our Q is definitely a Z.. :)
                     set new_paulis[qubitQidx] = PauliZ;
                     mutable counter = 0;
                     for (pauli_index in idxFermions[0]..idxFermions[3]) {
@@ -447,28 +427,6 @@ namespace MultiUnitary {
                 return to_process; 
             }
         }
-    }
-
-    operation package(indices : Int[], gate : (Qubit[] => Unit : Adjoint, Controlled), qb : Qubit[]) : Unit {
-        body (...) {
-            // packages an exclusion function with the original operator
-            let new_array = Exclude(indices, qb);
-            gate(new_array);
-        }
-        adjoint auto;
-        controlled auto;
-        adjoint controlled auto;
-    }
-
-    operation package2(indices : Int[], gate : (Qubit[] => Unit : Adjoint, Controlled), qb : Qubit[]) : Unit {
-        body (...) {
-            // packages an exclusion function with the original operator
-            let new_array = Exclude(indices, qb);
-            gate(new_array);
-        }
-        adjoint auto;
-        controlled auto;
-        adjoint controlled auto;
     }
 
     operation _SplitJW0123Term_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
@@ -498,6 +456,7 @@ namespace MultiUnitary {
                    [PauliX, PauliY, PauliY, PauliX]];
         
         mutable out_hold = new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
+
         // for each of these operations we need to perform
         for (idxOp in 0 .. Length(ops) - 1) {
             mutable total_gates = new Pauli[Length(qubits)];
@@ -513,9 +472,9 @@ namespace MultiUnitary {
                 // Exp(ops[idxOp] + ConstantArray(Length(qubitsPQJW) + Length(qubitsRSJW), PauliZ), angle * v0123[idxOp % 4], ((qubitsPQ + qubitsRS) + qubitsPQJW) + qubitsRSJW);
                 
                 // for each gate in the ops list
-                for (op_index in 0..Length(ops[idxOp])) {
+                for (op_index in 0..Length(ops[idxOp]) - 1) {
                     // set the gate basis to that pauli
-                    set total_gates[idxFermions[0]] = ops[idxOp][0];
+                    set total_gates[idxFermions[op_index]] = ops[idxOp][op_index];
                 }
 
                 // give the Z terms for the PQJW qubits
@@ -540,31 +499,26 @@ namespace MultiUnitary {
         let termType = idxTermType[0];
         
         if (termType == 0) {
+            Message($"TERM 0 IS INVOLVED");
             return _SplitJWZTerm_(generatorIndex, qubits);
         }
         elif (termType == 1) {
+            Message($"TERM 1 IS INVOLVED");
             return _SplitJWZZTerm_(generatorIndex, qubits);
         }
         elif (termType == 2) {
+            Message($"TERM 2 IS INVOLVED");
             return _SplitPQandPQQRTerm_(generatorIndex, qubits);
         }
         elif (termType == 3) {
+            Message($"TERM 3 IS INVOLVED");
             return _SplitJW0123Term_(generatorIndex, qubits);
         }
         else {
+            Message($"OTHER IS INVOLVED");
             return new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
         }
     } 
-    operation AdjustmentTerm(generatorIndex : GeneratorIndex) : Double {
-        let ((idxTermType, idxDoubles), idxFermions) = generatorIndex!;
-        if (idxTermType[0] == 0) {
-            return idxDoubles[0];
-        } elif (idxTermType[0] == 1) {
-            return idxDoubles[0];
-        } else {
-            return 0.0;
-        }
-    }
 }
 
 

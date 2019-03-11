@@ -4,20 +4,20 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Primitive;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"create_generator\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":23,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":27}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qSharpData\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":42},\"Item2\":{\"Line\":1,\"Column\":66}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":39}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Null\"}}]},\"ReturnType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorSystem\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":71},\"Item2\":{\"Line\":1,\"Column\":86}}]}}]},{\"Case\":\"Int\"}]]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"create_generator\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":23,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":27}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"Simulate\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"data\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":28},\"Item2\":{\"Line\":1,\"Column\":52}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":21},\"Item2\":{\"Line\":1,\"Column\":25}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"precision\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":63}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"moe\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":74},\"Item2\":{\"Line\":1,\"Column\":77}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Double\"}]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"Simulate\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":67,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"prepareStateHelper\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":130,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"coeffs\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"ComplexPolar\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":40},\"Item2\":{\"Line\":1,\"Column\":52}}]}}]}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":31},\"Item2\":{\"Line\":1,\"Column\":37}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qs\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":56},\"Item2\":{\"Line\":1,\"Column\":58}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"ComplexPolar\",\"Range\":{\"Case\":\"Null\"}}]}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"prepareStateHelper\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":130,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"SumExpectedValues\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":142,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"initial_oracle\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"HamiltonianGates\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorSystem\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":52},\"Item2\":{\"Line\":2,\"Column\":67}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":33},\"Item2\":{\"Line\":2,\"Column\":49}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"ancilla\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":33},\"Item2\":{\"Line\":3,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"moe\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":52},\"Item2\":{\"Line\":3,\"Column\":55}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorSystem\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"Double\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"SumExpectedValues\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":142,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"FindExpectedValue\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":195,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"InitialStateOracle\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":47}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"gate\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":33},\"Item2\":{\"Line\":2,\"Column\":37}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"measure_basis\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":59},\"Item2\":{\"Line\":2,\"Column\":72}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"ancilla\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":33},\"Item2\":{\"Line\":3,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"moe\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":52},\"Item2\":{\"Line\":3,\"Column\":55}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"Double\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"FindExpectedValue\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":195,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Function\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"MarginOfError\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":240,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":23}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"probability\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":24},\"Item2\":{\"Line\":1,\"Column\":35}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"runs\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":46},\"Item2\":{\"Line\":1,\"Column\":50}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"Z_SCORE\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":61},\"Item2\":{\"Line\":1,\"Column\":68}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"Double\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"MarginOfError\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":240,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":23}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"RunSingleIteration\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":246,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"InitialStateOracle\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":48}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"MysteryGate\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":34},\"Item2\":{\"Line\":2,\"Column\":45}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"basis\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":67},\"Item2\":{\"Line\":2,\"Column\":72}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"ancilla\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":84},\"Item2\":{\"Line\":2,\"Column\":91}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"Bool\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"RunSingleIteration\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":246,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"create_generator\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":27}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qSharpData\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":42},\"Item2\":{\"Line\":1,\"Column\":66}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":39}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Null\"}}]},\"ReturnType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorSystem\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":71},\"Item2\":{\"Line\":1,\"Column\":86}}]}}]},{\"Case\":\"Int\"}]]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"create_generator\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":27}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"Simulate\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":68,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"data\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":28},\"Item2\":{\"Line\":1,\"Column\":52}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":21},\"Item2\":{\"Line\":1,\"Column\":25}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"precision\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":54},\"Item2\":{\"Line\":1,\"Column\":63}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"moe\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":74},\"Item2\":{\"Line\":1,\"Column\":77}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Double\"}]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"Simulate\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":68,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":19}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"prepareStateHelper\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":132,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"coeffs\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"ComplexPolar\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":40},\"Item2\":{\"Line\":1,\"Column\":52}}]}}]}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":31},\"Item2\":{\"Line\":1,\"Column\":37}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qs\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":56},\"Item2\":{\"Line\":1,\"Column\":58}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"ComplexPolar\",\"Range\":{\"Case\":\"Null\"}}]}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"UnitType\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"prepareStateHelper\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":132,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"SumExpectedValues\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":136,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"initial_oracle\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"HamiltonianGates\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorSystem\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":2,\"Column\":52},\"Item2\":{\"Line\":2,\"Column\":67}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":33},\"Item2\":{\"Line\":2,\"Column\":49}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"ancilla\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":33},\"Item2\":{\"Line\":3,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"moe\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":52},\"Item2\":{\"Line\":3,\"Column\":55}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorSystem\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"Double\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"SumExpectedValues\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":136,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"FindExpectedValue\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":175,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"InitialStateOracle\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":47}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"gate\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":33},\"Item2\":{\"Line\":2,\"Column\":37}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"measure_basis\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":59},\"Item2\":{\"Line\":2,\"Column\":72}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"ancilla\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":33},\"Item2\":{\"Line\":3,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"moe\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":3,\"Column\":52},\"Item2\":{\"Line\":3,\"Column\":55}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"Double\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"FindExpectedValue\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":175,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Function\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"MarginOfError\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":220,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":23}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"probability\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":24},\"Item2\":{\"Line\":1,\"Column\":35}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"runs\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":46},\"Item2\":{\"Line\":1,\"Column\":50}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"Z_SCORE\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":61},\"Item2\":{\"Line\":1,\"Column\":68}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"ReturnType\":{\"Case\":\"Double\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"MarginOfError\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":220,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":10},\"Item2\":{\"Line\":1,\"Column\":23}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"VQE\",\"Name\":\"RunSingleIteration\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":226,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"InitialStateOracle\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":30},\"Item2\":{\"Line\":1,\"Column\":48}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"MysteryGate\"]},\"Type\":{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":34},\"Item2\":{\"Line\":2,\"Column\":45}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"basis\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":67},\"Item2\":{\"Line\":2,\"Column\":72}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"ancilla\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":2,\"Column\":84},\"Item2\":{\"Line\":2,\"Column\":91}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"Bool\"},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"VQE\",\"Name\":\"RunSingleIteration\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Intro1/VQE/Operations.qs\",\"Position\":{\"Item1\":226,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":29}},\"Documentation\":[]}")]
 #line hidden
 namespace VQE
 {
@@ -47,11 +47,11 @@ namespace VQE
         public override Func<Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, (Microsoft.Quantum.Canon.GeneratorSystem,Int64)> Body => (__in__) =>
         {
             var qSharpData = __in__;
-#line 28 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 29 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var (nSpinOrbitals,data,statePrepData,energyShift) = qSharpData.Data;
-#line 33 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 34 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var generatorSystem = MicrosoftQuantumChemistryJordanWignerJordanWignerGeneratorSystem.Apply(data);
-#line 63 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 64 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             return (generatorSystem, nSpinOrbitals);
         }
 
@@ -125,53 +125,53 @@ namespace VQE
         public override Func<(Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,Double,Double), QArray<QArray<Double>>> Body => (__in__) =>
         {
             var (data,precision,moe) = __in__;
-#line 69 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 70 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             Message.Apply("BEGINNING SIMULATION");
-#line 71 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 72 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var (nSpinOrbitals,fermionTermData,statePrepData,energyOffset) = data.Data;
-#line 74 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 75 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var out_val = new QArray<QArray<Double>>(2L);
-#line 78 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 79 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var (ham_terms,nOrbitals) = create_generator.Apply(data);
-#line 80 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-            var ground_energy = 1000D;
 #line 81 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-            var ground_phase = 3D;
+            var ground_energy = 1000D;
 #line 82 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+            var ground_phase = 3D;
+#line 83 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var index = 0L;
 #line hidden
             {
-#line 84 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-                var testQ = Allocate.Apply(nOrbitals);
 #line 85 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-                var phi = 0D;
+                var testQ = Allocate.Apply(nOrbitals);
 #line 86 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+                var phi = 0D;
+#line 87 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 while (true)
                 {
-#line 87 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 88 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     Message.Apply(String.Format("Testing phase: {0}", phi));
-#line 89 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 90 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     Message.Apply(String.Format("{0}", energyOffset));
-#line 95 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 96 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     var initial_oracle = MicrosoftQuantumChemistryJordanWignerPrepareTrialState.Partial(new Func<QArray<Qubit>, (QArray<Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState>,QArray<Qubit>)>((__arg1__) => (statePrepData?.Copy(), __arg1__)));
-#line 100 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 101 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     var discovered_energy = (SumExpectedValues.Apply((initial_oracle, ham_terms, testQ?.Copy(), moe)) + energyOffset);
-#line 103 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 105 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     out_val[index] = new QArray<Double>(phi, discovered_energy);
-#line 106 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 108 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     if ((discovered_energy < ground_energy))
                     {
-#line 109 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 111 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                         ground_energy = discovered_energy;
-#line 110 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 112 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                         ground_phase = phi;
                     }
 
-#line 113 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 115 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     Message.Apply(String.Format("ENERGY FOUND: {0}", discovered_energy));
-#line 116 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 118 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     index = (index + 1L);
-#line 119 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 121 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     phi = (phi + precision);
                     if ((phi >= 2D))
                     {
@@ -186,11 +186,11 @@ namespace VQE
                 Release.Apply(testQ);
             }
 
-#line 125 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-            Message.Apply(String.Format("Ground energy: {0}", ground_energy));
-#line 126 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-            Message.Apply(String.Format("Ground state: {0}", ground_phase));
 #line 127 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+            Message.Apply(String.Format("Ground energy: {0}", ground_energy));
+#line 128 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+            Message.Apply(String.Format("Ground state: {0}", ground_phase));
+#line 129 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             return out_val;
         }
 
@@ -239,7 +239,7 @@ namespace VQE
         public override Func<(QArray<Microsoft.Quantum.Canon.ComplexPolar>,QArray<Qubit>), QVoid> Body => (__in__) =>
         {
             var (coeffs,qs) = __in__;
-#line 132 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 134 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             MicrosoftQuantumCanonPrepareArbitraryState.Apply((coeffs?.Copy(), new Microsoft.Quantum.Canon.BigEndian(qs?.Copy())));
 #line hidden
             return QVoid.Instance;
@@ -282,18 +282,6 @@ namespace VQE
             set;
         }
 
-        protected ICallable<Int64, Double> MicrosoftQuantumExtensionsConvertToDouble
-        {
-            get;
-            set;
-        }
-
-        protected ICallable<Microsoft.Quantum.Canon.GeneratorIndex, Double> MultiUnitaryAdjustmentTerm
-        {
-            get;
-            set;
-        }
-
         protected ICallable<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> MultiUnitaryCreatePauliSet
         {
             get;
@@ -309,35 +297,32 @@ namespace VQE
         public override Func<(ICallable,Microsoft.Quantum.Canon.GeneratorSystem,QArray<Qubit>,Double), Double> Body => (__in__) =>
         {
             var (initial_oracle,HamiltonianGates,ancilla,moe) = __in__;
-#line 150 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 144 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var total = 0D;
-#line 156 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 150 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var (num_of_terms,jw_term_indexer) = HamiltonianGates.Data;
-#line 159 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 153 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             foreach (var i in new Range(0L, (num_of_terms - 1L)))
 #line hidden
             {
-#line 161 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 155 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 var jw_term = jw_term_indexer.Apply<Microsoft.Quantum.Canon.GeneratorIndex>(i);
-#line 175 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 158 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 var gate_basis_pairs = MultiUnitaryCreatePauliSet.Apply((jw_term, ancilla?.Copy()));
-#line 178 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 161 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 foreach (var gate_combo in new Range(0L, (gate_basis_pairs.Length - 1L)))
 #line hidden
                 {
-#line 181 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 164 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     var (gate_to_evaluate,basis,value) = gate_basis_pairs[gate_combo];
-#line 184 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 167 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     var ((gate_keys,weight),targets) = jw_term.Data;
-#line 188 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-                    total = (total + ((weight[0L] * MicrosoftQuantumExtensionsConvertToDouble.Apply(value)) * FindExpectedValue.Apply((initial_oracle, gate_to_evaluate, basis?.Copy(), ancilla?.Copy(), moe))));
+#line 170 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+                    total = (total + (weight[0L] * FindExpectedValue.Apply((initial_oracle, gate_to_evaluate, basis?.Copy(), ancilla?.Copy(), moe))));
                 }
-
-#line 191 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
-                total = (total - MultiUnitaryAdjustmentTerm.Apply(jw_term));
             }
 
-#line 193 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 173 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             return total;
         }
 
@@ -345,8 +330,6 @@ namespace VQE
         public override void Init()
         {
             this.Length = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Core.Length<>));
-            this.MicrosoftQuantumExtensionsConvertToDouble = this.Factory.Get<ICallable<Int64, Double>>(typeof(Microsoft.Quantum.Extensions.Convert.ToDouble));
-            this.MultiUnitaryAdjustmentTerm = this.Factory.Get<ICallable<Microsoft.Quantum.Canon.GeneratorIndex, Double>>(typeof(MultiUnitary.AdjustmentTerm));
             this.MultiUnitaryCreatePauliSet = this.Factory.Get<ICallable<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>>>(typeof(MultiUnitary.CreatePauliSet));
             this.FindExpectedValue = this.Factory.Get<ICallable<(ICallable,ICallable,QArray<Pauli>,QArray<Qubit>,Double), Double>>(typeof(FindExpectedValue));
         }
@@ -391,37 +374,37 @@ namespace VQE
         public override Func<(ICallable,ICallable,QArray<Pauli>,QArray<Qubit>,Double), Double> Body => (__in__) =>
         {
             var (InitialStateOracle,gate,measure_basis,ancilla,moe) = __in__;
-#line 203 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 183 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var Z_SCORE = 1.96D;
-#line 206 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 186 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var out_val = -(10D);
-#line 209 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 189 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var run_sum = 0D;
-#line 212 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 192 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var total_runs = 0D;
-#line 215 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 195 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var error_term = 1D;
-#line 217 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 197 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             while (true)
             {
-#line 218 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 198 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 foreach (var i in new Range(0L, 10L))
 #line hidden
                 {
-#line 220 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 200 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     if (RunSingleIteration.Apply((InitialStateOracle, gate, measure_basis?.Copy(), ancilla?.Copy())))
                     {
-#line 222 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 202 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                         run_sum = (run_sum + 1D);
                     }
 
-#line 224 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 204 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                     total_runs = (total_runs + 1D);
                 }
 
-#line 228 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 208 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 out_val = (run_sum / total_runs);
-#line 231 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 211 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
                 error_term = MarginOfError.Apply((out_val, total_runs, Z_SCORE));
                 if (((error_term < moe) || (total_runs >= 50D)))
                 {
@@ -432,7 +415,7 @@ namespace VQE
                 }
             }
 
-#line 238 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 218 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             return (1D - (2D * out_val));
         }
 
@@ -477,7 +460,7 @@ namespace VQE
         public override Func<(Double,Double,Double), Double> Body => (__in__) =>
         {
             var (probability,runs,Z_SCORE) = __in__;
-#line 244 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 224 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             return (Z_SCORE * MicrosoftQuantumExtensionsMathSqrt.Apply(((probability * (1D - probability)) / runs)));
         }
 
@@ -527,15 +510,15 @@ namespace VQE
         public override Func<(ICallable,ICallable,QArray<Pauli>,QArray<Qubit>), Boolean> Body => (__in__) =>
         {
             var (InitialStateOracle,MysteryGate,basis,ancilla) = __in__;
-#line 256 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 236 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             InitialStateOracle.Apply(ancilla?.Copy());
-#line 259 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 239 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             MysteryGate.Apply(ancilla?.Copy());
-#line 263 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 243 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             var out_val = ((Measure.Apply((basis?.Copy(), ancilla?.Copy())) == Result.One) ? true : false);
-#line 266 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 246 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             ResetAll.Apply(ancilla?.Copy());
-#line 268 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
+#line 248 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Intro1\\VQE\\Operations.qs"
             return out_val;
         }
 

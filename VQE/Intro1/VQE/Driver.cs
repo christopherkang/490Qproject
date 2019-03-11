@@ -21,8 +21,9 @@ namespace VQE
         {
             #region Parameters of Operation
             // filename of the molecule to be emulated 
-            // var FILENAME = "h2_2_sto6g_1.0au.yaml";
-            var FILENAME = "h4_sto6g_0.000.yaml";
+            var FILENAME = "h2_2_sto6g_1.0au.yaml";
+            // var FILENAME = "h4_sto6g_0.000.yaml";
+            // var FILENAME = "h20_nwchem.yaml";
 
             // use this state provided in the YAML
             var STATE = "|G>";
@@ -48,10 +49,10 @@ namespace VQE
             // convert the hamiltonian into it's JW Encoding
             var JWEncoding = JordanWignerEncoding.Create(hamiltonian);
 
-            var data = JWEncoding.QSharpData();
+            var data = JWEncoding.QSharpData(STATE);
 
             // Console.WriteLine("----- Print Hamiltonian");
-            // Console.Write(data);
+            // Console.Write(hamiltonian);
             // Console.WriteLine("----- End Print Hamiltonian \n");
 
             #endregion

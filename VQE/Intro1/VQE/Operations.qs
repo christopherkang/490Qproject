@@ -7,6 +7,7 @@ namespace VQE
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Extensions.Math;
+    open Microsoft.Quantum.Extensions.Testing;
     open Microsoft.Quantum.Extensions.Convert;
     open Microsoft.Quantum.Chemistry;
     open Microsoft.Quantum.Chemistry.JordanWigner; 
@@ -98,6 +99,7 @@ namespace VQE
                 
                 // create an energy estimate
                 let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe) + energyOffset;
+                // let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe);
                 
                 // set the specific row to have the initial state given + the energy prediction
                 set out_val[index] = [phi, discovered_energy];
@@ -132,14 +134,6 @@ namespace VQE
         PrepareArbitraryState(coeffs, BigEndian(qs));
     }
 
-    // operation make_terms (data : GeneratorSystem, index : Int) : ((Qubit[] => Unit : Adjoint, Controlled), (Pauli[]), Double) {
-    //     // FLAG: MAKE THIS OPERATION WHICH GOES THROUGH THE EVOLUTION GENERATOR AND CREATES 
-    //     // THE NECESSARY GATE COMBOS + PAULI BASES TO USE FOR THE FUTURE METHODS
-
-    //     // FLAG: IT MAY BE EASIER TO JUST CREATE A SEPARATE QSHARP MODULE TO HANDLE DEALING WITH ALL OF THIS
-    // }
-
-
     operation SumExpectedValues(initial_oracle : (Qubit[] => Unit), 
                                 HamiltonianGates : GeneratorSystem, 
                                 ancilla : Qubit[], moe : Double) : Double {
@@ -160,17 +154,6 @@ namespace VQE
             // and take the specified term (which is of type GeneratorIndex)
             let jw_term = jw_term_indexer(i);
 
-            // create a list of unitaries to apply
-            // FLAG - TO CREATE IN METHOD
-            // let gates = (customSet!(jw_term))!;
-
-            // // for each gate we need to use
-            // for (unitary in 0..Length(gates) - 1) {
-
-            // }
-            
-            // let (gate_set, basis, weight) = make_terms(HamiltonianGates, i);
-
             // for each JW term create the individual gates
             let gate_basis_pairs = CreatePauliSet(jw_term, ancilla);
 
@@ -184,11 +167,8 @@ namespace VQE
                 let ((gate_keys, weight), targets) = jw_term!;
 
                 // multiply the expected value by the weight
-                // set total = total + weight[gate_combo] * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
-                set total = total + weight[0] * ToDouble(value) * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
+                set total = total + weight[0] * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
             }
-            // set total = total + AdjustmentTerm(jw_term);
-            set total = total - AdjustmentTerm(jw_term);
         }
         return total;
     }
