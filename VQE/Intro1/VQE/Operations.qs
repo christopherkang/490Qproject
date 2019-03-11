@@ -7,6 +7,7 @@ namespace VQE
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Primitive;
     open Microsoft.Quantum.Extensions.Math;
+    open Microsoft.Quantum.Extensions.Convert;
     open Microsoft.Quantum.Chemistry;
     open Microsoft.Quantum.Chemistry.JordanWigner; 
     open MultiUnitary;
@@ -169,21 +170,25 @@ namespace VQE
             // }
             
             // let (gate_set, basis, weight) = make_terms(HamiltonianGates, i);
+
+            // for each JW term create the individual gates
             let gate_basis_pairs = CreatePauliSet(jw_term, ancilla);
 
             // for each gate combo we have
             for (gate_combo in 0..Length(gate_basis_pairs) - 1) {
 
                 // extract the gate to evaluate and the basis to use
-                let (gate_to_evaluate, basis) = gate_basis_pairs[gate_combo];
+                let (gate_to_evaluate, basis, value) = gate_basis_pairs[gate_combo];
 
                 // also get the weight
                 let ((gate_keys, weight), targets) = jw_term!;
 
                 // multiply the expected value by the weight
                 // set total = total + weight[gate_combo] * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
-                set total = total + weight[0] * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
+                set total = total + weight[0] * ToDouble(value) * FindExpectedValue(initial_oracle, gate_to_evaluate, basis, ancilla, moe);
             }
+            // set total = total + AdjustmentTerm(jw_term);
+            set total = total - AdjustmentTerm(jw_term);
         }
         return total;
     }
@@ -224,7 +229,7 @@ namespace VQE
 
             // calculate the current margin of error
             set error_term = MarginOfError(out_val, total_runs, Z_SCORE);
-        } until (error_term < moe)
+        } until (error_term < moe || total_runs >= 50.0)
         fixup {}
 
         // Recognize that this probability is the probability we have achieved a one

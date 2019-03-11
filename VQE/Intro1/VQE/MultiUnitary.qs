@@ -279,10 +279,12 @@ namespace MultiUnitary {
     // }
 
     // BEGIN NEW CODE
-    operation _SplitJWZTerm_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
+    operation _SplitJWZTerm_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
         // we'd like to apply the single Z term
         // in this case, we need to also provide a list of paulis as the measurement basis
         let ((idxTermType, coeff), idxFermions) = generatorIndex!;
+
+        Message($"{coeff}");
 
         // create the basis set to return
         // mutable basis_set = new Pauli[Length(qubits)];
@@ -294,10 +296,10 @@ namespace MultiUnitary {
         set total_gates[idxFermions[0]] = PauliZ;
 
         // return [(ApplyPauli(total_gates, _), basis_set)];
-        return [(ApplyPauli(total_gates, _), total_gates)];
+        return [(ApplyPauli(total_gates, _), total_gates, -1)];
     }
 
-    operation _SplitJWZZTerm_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
+    operation _SplitJWZZTerm_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
         let ((idxTermType, coeff), idxFermions) = generatorIndex!;
 
         mutable total_gates = new Pauli[Length(qubits)];
@@ -305,14 +307,14 @@ namespace MultiUnitary {
         set total_gates[idxFermions[1]] = PauliZ;
         // let qubitsZZ = Subarray(idxFermions[0 .. 1], qubits);
         // Exp([PauliZ, PauliZ], angle, qubitsZZ);
-        return [(ApplyPauli(total_gates, _), total_gates)];
+        return [(ApplyPauli(total_gates, _), total_gates, 1)];
     }
 
-    operation _SplitJWPQTerm_(term : GeneratorIndex, extraParityQubits : Qubit[], qubits : Qubit[]) :  ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
+    operation _SplitJWPQTerm_(term : GeneratorIndex, extraParityQubits : Qubit[], qubits : Qubit[]) :  ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
         let ((idxTermType, coeff), idxFermions) = term!;
         // let angle = (1.0 * coeff[0]) * stepSize;
         
-        mutable out_hold = new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[0];
+        mutable out_hold = new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
 
         // pull out the qubits that matter
         let qubitsPQ = Subarray(idxFermions[0 .. 1], qubits);
@@ -337,7 +339,7 @@ namespace MultiUnitary {
             for (qubit_index in Length(qubits) .. Length(total_gates) - 1) {
                 set total_gates[qubit_index] = PauliZ;
             }
-            set out_hold = out_hold + [(ApplyPauli(total_gates, _), total_gates)];
+            set out_hold = out_hold + [(ApplyPauli(total_gates, _), total_gates, 1)];
         }
         return out_hold;
     }
@@ -380,7 +382,7 @@ namespace MultiUnitary {
         return out_hold;
     }
 
-    operation _SplitPQandPQQRTerm_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
+    operation _SplitPQandPQQRTerm_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
         let ((idxTermType, coeff), idxFermions) = generatorIndex!;
         // let angle = (1.0 * coeff[0]) * stepSize;
         let qubitQidx = idxFermions[1];
@@ -406,7 +408,7 @@ namespace MultiUnitary {
                 for (gate_set in 0..Length(to_process) - 1) {
 
                     // unpack the gate set and the paulis used
-                    let (given_gate, given_paulis) = to_process[gate_set];
+                    let (given_gate, given_paulis, value) = to_process[gate_set];
 
                     // create the new array by exluding a qubit
                     // let new_array = Exclude<Qubit>([qubitQidx], _);
@@ -418,7 +420,7 @@ namespace MultiUnitary {
                     // z, z, ,  z, z, z, z, z,
                     let new_oracle = ApplyToSubregisterCA(given_gate, Exclude([qubitQidx], IntArrayFromRange(0..Length(qubits) - 1)), _);
                     let new_paulis = given_paulis[0..qubitQidx - 1] + [PauliI] + given_paulis[qubitQidx..Length(given_paulis) - 1];
-                    set to_process[gate_set] = (new_oracle, new_paulis);
+                    set to_process[gate_set] = (new_oracle, new_paulis, 1);
                 }
                 return to_process;
                 // return _SplitJWPQTermWithSkip_(generatorIndex, new Qubit[0], qubits, qubitQidx);
@@ -428,7 +430,7 @@ namespace MultiUnitary {
                 // return _SplitJWPQTerm_(termPR1, [qubits[qubitQidx]], qubits[idxFermions[0] .. idxFermions[3]]);
                 mutable to_process = _SplitJWPQTerm_(termPR1, [qubits[qubitQidx]], qubits[idxFermions[0] .. idxFermions[3]]);
                 for (gate_set in 0..Length(to_process) - 1) {
-                    let (given_gate, given_paulis) = to_process[gate_set];
+                    let (given_gate, given_paulis, value) = to_process[gate_set];
                     // let sub_qubits = Subarray<Qubit>(IntArrayFromRange(idxFermions[0]..idxFermions[3]), _);
                     let new_oracle = ApplyToSubregisterCA(given_gate, IntArrayFromRange(idxFermions[0]..idxFermions[3]) + [qubitQidx], _);
                     mutable new_paulis = new Pauli[Length(qubits)];
@@ -439,7 +441,7 @@ namespace MultiUnitary {
                         set counter = counter + 1;
                     }
                     // let new_paulis = new Pauli[0..] + given_paulis + new Pauli[Length(qubits) - idxFermions[3] - 1];
-                    set to_process[gate_set] = (new_oracle, new_paulis);
+                    set to_process[gate_set] = (new_oracle, new_paulis, 1);
                 }
                 // return _SplitJWPQTermWithSkip2_(generatorIndex, new Qubit[0], qubits, qubitQidx); 
                 return to_process; 
@@ -469,7 +471,7 @@ namespace MultiUnitary {
         adjoint controlled auto;
     }
 
-    operation _SplitJW0123Term_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
+    operation _SplitJW0123Term_(generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
         let ((idxTermType, v0123), idxFermions) = generatorIndex!;
         // let angle = stepSize;
 
@@ -495,10 +497,16 @@ namespace MultiUnitary {
                    [PauliY, PauliX, PauliY, PauliX], 
                    [PauliX, PauliY, PauliY, PauliX]];
         
-        mutable out_hold = new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[0];
+        mutable out_hold = new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
         // for each of these operations we need to perform
         for (idxOp in 0 .. Length(ops) - 1) {
             mutable total_gates = new Pauli[Length(qubits)];
+
+            mutable value = 1;
+
+            if (idxOp == 0 || idxOp == 5) {
+                set value = -1;
+            }
             
             // FLAG - THIS CHECK CAN STILL BE HERE BUT IS NOT ENTIRELY NECESSARY?
             if (IsNotZero(v0123[idxOp % 4])) {
@@ -520,14 +528,14 @@ namespace MultiUnitary {
                     set total_gates[qubit_index] = PauliZ;
                 }
 
-                set out_hold = out_hold + [(ApplyPauli(total_gates, _), total_gates)];
+                set out_hold = out_hold + [(ApplyPauli(total_gates, _), total_gates, value)];
             }
         }
         return out_hold;
     }
 
     // Create a set of unitaries that describes the transformations to be made on qubits given a specific generatorIndex
-    operation CreatePauliSet (generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[] {
+    operation CreatePauliSet (generatorIndex : GeneratorIndex, qubits : Qubit[]) : ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[] {
         let ((idxTermType, idxDoubles), idxFermions) = generatorIndex!;
         let termType = idxTermType[0];
         
@@ -544,10 +552,19 @@ namespace MultiUnitary {
             return _SplitJW0123Term_(generatorIndex, qubits);
         }
         else {
-            return new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[])[0];
+            return new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
         }
     } 
-    
+    operation AdjustmentTerm(generatorIndex : GeneratorIndex) : Double {
+        let ((idxTermType, idxDoubles), idxFermions) = generatorIndex!;
+        if (idxTermType[0] == 0) {
+            return idxDoubles[0];
+        } elif (idxTermType[0] == 1) {
+            return idxDoubles[0];
+        } else {
+            return 0.0;
+        }
+    }
 }
 
 

@@ -21,14 +21,14 @@ namespace VQE
         {
             #region Parameters of Operation
             // filename of the molecule to be emulated 
-            var FILENAME = "h2_2_sto6g_1.0au.yaml";
-            // var FILENAME = "h4_sto6g_0.000.yaml";
+            // var FILENAME = "h2_2_sto6g_1.0au.yaml";
+            var FILENAME = "h4_sto6g_0.000.yaml";
 
             // use this state provided in the YAML
             var STATE = "|G>";
 
             // the margin of error to use when approximating the expected value 
-            var MOE = 0.005;
+            var MOE = 0.1;
 
             // precision to iterate over with the state preparation gate
             // the number of trials is directly proportional to this constant's inverse
@@ -73,7 +73,7 @@ namespace VQE
             {
                 // Simulate.Run(qsim).Wait();
                 // Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
-                Console.WriteLine(Simulate.Run(qsim, data, 1.0, 0.001).Result);
+                Console.WriteLine(Simulate.Run(qsim, data, 1.0, MOE).Result);
             }
             #endregion 
             #region Classical update scheme
