@@ -84,7 +84,7 @@ namespace VQE
 
                 // increase the angle
                 set phi = phi + precision;
-            } until (phi >= 2.0)
+            } until (phi >= 20.0)
             fixup {
 
             }

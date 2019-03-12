@@ -177,7 +177,7 @@ namespace VQE
                     index = (index + 1L);
 #line 86 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\Operations.qs"
                     phi = (phi + precision);
-                    if ((phi >= 2D))
+                    if ((phi >= 20D))
                     {
                         break;
                     }
