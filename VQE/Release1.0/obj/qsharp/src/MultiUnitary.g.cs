@@ -4,18 +4,18 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Primitive;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":43},\"Item2\":{\"Line\":1,\"Column\":57}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":26},\"Item2\":{\"Line\":1,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":59},\"Item2\":{\"Line\":1,\"Column\":65}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZZTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":44},\"Item2\":{\"Line\":1,\"Column\":58}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":27},\"Item2\":{\"Line\":1,\"Column\":41}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":60},\"Item2\":{\"Line\":1,\"Column\":66}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZZTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWPQTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"term\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":34},\"Item2\":{\"Line\":1,\"Column\":48}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":27},\"Item2\":{\"Line\":1,\"Column\":31}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"extraParityQubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":50},\"Item2\":{\"Line\":1,\"Column\":67}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":79},\"Item2\":{\"Line\":1,\"Column\":85}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWPQTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitPQandPQQRTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":77,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":31}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":49},\"Item2\":{\"Line\":1,\"Column\":63}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":32},\"Item2\":{\"Line\":1,\"Column\":46}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":65},\"Item2\":{\"Line\":1,\"Column\":71}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitPQandPQQRTerm_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":77,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":31}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJW0123Term_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":146,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":46},\"Item2\":{\"Line\":1,\"Column\":60}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":62},\"Item2\":{\"Line\":1,\"Column\":68}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJW0123Term_\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":146,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
-[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"CreatePauliSet\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":208,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":44},\"Item2\":{\"Line\":1,\"Column\":58}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":27},\"Item2\":{\"Line\":1,\"Column\":41}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":60},\"Item2\":{\"Line\":1,\"Column\":66}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"CreatePauliSet\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":208,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":43},\"Item2\":{\"Line\":1,\"Column\":57}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":26},\"Item2\":{\"Line\":1,\"Column\":40}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":59},\"Item2\":{\"Line\":1,\"Column\":65}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":10,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZZTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":44},\"Item2\":{\"Line\":1,\"Column\":58}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":27},\"Item2\":{\"Line\":1,\"Column\":41}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":60},\"Item2\":{\"Line\":1,\"Column\":66}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWZZTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":24,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWPQTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"term\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":34},\"Item2\":{\"Line\":1,\"Column\":48}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":27},\"Item2\":{\"Line\":1,\"Column\":31}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"extraParityQubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":50},\"Item2\":{\"Line\":1,\"Column\":67}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":79},\"Item2\":{\"Line\":1,\"Column\":85}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJWPQTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":37,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":26}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitPQandPQQRTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":77,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":31}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":49},\"Item2\":{\"Line\":1,\"Column\":63}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":32},\"Item2\":{\"Line\":1,\"Column\":46}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":65},\"Item2\":{\"Line\":1,\"Column\":71}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitPQandPQQRTerm_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":77,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":31}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJW0123Term_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":146,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":46},\"Item2\":{\"Line\":1,\"Column\":60}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":29},\"Item2\":{\"Line\":1,\"Column\":43}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":62},\"Item2\":{\"Line\":1,\"Column\":68}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"_SplitJW0123Term_\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":146,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":28}},\"Documentation\":[]}")]
+[assembly: CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"CreatePauliSet\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":208,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"generatorIndex\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Value\",\"Fields\":[{\"Item1\":{\"Line\":1,\"Column\":44},\"Item2\":{\"Line\":1,\"Column\":58}}]}}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":27},\"Item2\":{\"Line\":1,\"Column\":41}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qubits\"]},\"Type\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":60},\"Item2\":{\"Line\":1,\"Column\":66}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Canon\",\"Name\":\"GeneratorIndex\",\"Range\":{\"Case\":\"Null\"}}]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]}]]},\"ReturnType\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Operation\",\"Fields\":[{\"Item1\":{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Qubit\"}]},\"Item2\":{\"Case\":\"UnitType\"}},[{\"Case\":\"Adjoint\"},{\"Case\":\"Controlled\"}]]},{\"Case\":\"ArrayType\",\"Fields\":[{\"Case\":\"Pauli\"}]},{\"Case\":\"Int\"}]]}]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"MultiUnitary\",\"Name\":\"CreatePauliSet\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/MultiUnitary.qs\",\"Position\":{\"Item1\":208,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":25}},\"Documentation\":[]}")]
 #line hidden
 namespace MultiUnitary
 {
@@ -51,13 +51,13 @@ namespace MultiUnitary
         public override Func<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> Body => (__in__) =>
         {
             var (generatorIndex,qubits) = __in__;
-#line 14 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 14 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ((idxTermType,coeff),idxFermions) = generatorIndex.Data;
-#line 17 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 17 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var total_gates = new QArray<Pauli>(qubits.Length);
-#line 20 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 20 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             total_gates[idxFermions[0L]] = Pauli.PauliZ;
-#line 22 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 22 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             return new QArray<(IUnitary,QArray<Pauli>,Int64)>()
             {(MicrosoftQuantumCanonApplyPauli.Partial(new Func<QArray<Qubit>, (QArray<Pauli>,QArray<Qubit>)>((__arg1__) => (total_gates?.Copy(), __arg1__))), total_gates?.Copy(), -(1L))};
         }
@@ -109,15 +109,15 @@ namespace MultiUnitary
         public override Func<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> Body => (__in__) =>
         {
             var (generatorIndex,qubits) = __in__;
-#line 26 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 26 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ((idxTermType,coeff),idxFermions) = generatorIndex.Data;
-#line 29 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 29 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var total_gates = new QArray<Pauli>(qubits.Length);
-#line 32 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 32 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             total_gates[idxFermions[0L]] = Pauli.PauliZ;
-#line 33 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 33 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             total_gates[idxFermions[1L]] = Pauli.PauliZ;
-#line 35 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 35 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             return new QArray<(IUnitary,QArray<Pauli>,Int64)>()
             {(MicrosoftQuantumCanonApplyPauli.Partial(new Func<QArray<Qubit>, (QArray<Pauli>,QArray<Qubit>)>((__arg1__) => (total_gates?.Copy(), __arg1__))), total_gates?.Copy(), 1L)};
         }
@@ -175,48 +175,48 @@ namespace MultiUnitary
         public override Func<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> Body => (__in__) =>
         {
             var (term,extraParityQubits,qubits) = __in__;
-#line 39 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 39 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ((idxTermType,coeff),idxFermions) = term.Data;
-#line 42 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 42 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var out_hold = new QArray<(IUnitary,QArray<Pauli>,Int64)>(0L);
-#line 45 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 45 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitsPQ = MicrosoftQuantumCanonSubarray.Apply<QArray<Qubit>>((idxFermions?.Slice(new Range(0L, 1L)), qubits?.Copy()));
-#line 48 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 48 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitsJW = qubits?.Slice(new Range((idxFermions[0L] + 1L), (idxFermions[1L] - 1L)));
-#line 51 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 51 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ops = new QArray<QArray<Pauli>>(new QArray<Pauli>(Pauli.PauliX, Pauli.PauliX), new QArray<Pauli>(Pauli.PauliY, Pauli.PauliY));
-#line 54 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 54 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             foreach (var idxOp in new Range(0L, (ops.Length - 1L)))
 #line hidden
             {
-#line 55 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 55 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 var total_gates = new QArray<Pauli>((qubits.Length + extraParityQubits.Length));
-#line 60 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 60 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 total_gates[idxFermions[0L]] = ops[idxOp][0L];
-#line 61 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 61 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 total_gates[idxFermions[1L]] = ops[idxOp][1L];
-#line 64 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 64 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 foreach (var qubit_index in new Range((idxFermions[0L] + 1L), (idxFermions[1L] - 1L)))
 #line hidden
                 {
-#line 65 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 65 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     total_gates[qubit_index] = Pauli.PauliZ;
                 }
 
-#line 69 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 69 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 foreach (var qubit_index in new Range(qubits.Length, (total_gates.Length - 1L)))
 #line hidden
                 {
-#line 70 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 70 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     total_gates[qubit_index] = Pauli.PauliZ;
                 }
 
-#line 73 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 73 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 out_hold = (out_hold + new QArray<(IUnitary,QArray<Pauli>,Int64)>()
                 {(MicrosoftQuantumCanonApplyPauli.Partial(new Func<QArray<Qubit>, (QArray<Pauli>,QArray<Qubit>)>((__arg1__) => (total_gates?.Copy(), __arg1__))), total_gates?.Copy(), 1L)});
             }
 
-#line 75 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 75 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             return out_hold;
         }
 
@@ -286,87 +286,87 @@ namespace MultiUnitary
         public override Func<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> Body => (__in__) =>
         {
             var (generatorIndex,qubits) = __in__;
-#line 79 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 79 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ((idxTermType,coeff),idxFermions) = generatorIndex.Data;
-#line 81 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 81 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitQidx = idxFermions[1L];
-#line 89 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 89 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             if ((idxFermions.Length == 2L))
             {
-#line 90 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 90 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 var termPR0 = new Microsoft.Quantum.Canon.GeneratorIndex(((idxTermType?.Copy(), new QArray<Double>()
                 {1D}), idxFermions?.Copy()));
-#line 91 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 91 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 return _SplitJWPQTerm_.Apply((termPR0, new QArray<Qubit>(0L), qubits?.Copy()));
             }
             else
             {
-#line 94 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 94 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 if (((idxFermions[0L] < qubitQidx) && (qubitQidx < idxFermions[3L])))
                 {
-#line 95 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 95 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     var termPR1 = new Microsoft.Quantum.Canon.GeneratorIndex(((idxTermType?.Copy(), new QArray<Double>()
                     {1D}), new QArray<Int64>(idxFermions[0L], (idxFermions[3L] - 1L))));
-#line 96 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 96 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     var to_process = _SplitJWPQTerm_.Apply((termPR1, new QArray<Qubit>(0L), MicrosoftQuantumCanonExclude.Apply<QArray<Qubit>>((new QArray<Int64>()
                     {qubitQidx}, qubits?.Copy()))));
-#line 99 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 99 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     foreach (var gate_set in new Range(0L, (to_process.Length - 1L)))
 #line hidden
                     {
-#line 102 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 102 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var (given_gate,given_paulis,value) = to_process[gate_set];
-#line 110 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 110 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var new_oracle = MicrosoftQuantumCanonApplyToSubregisterCA.Partial(new Func<QArray<Qubit>, (IUnitary,QArray<Int64>,QArray<Qubit>)>((__arg1__) => (given_gate, MicrosoftQuantumCanonExclude.Apply<QArray<Int64>>((new QArray<Int64>()
                         {qubitQidx}, MicrosoftQuantumCanonIntArrayFromRange.Apply(new Range(0L, (qubits.Length - 1L))))), __arg1__)));
-#line 113 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 113 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var new_paulis = ((given_paulis?.Slice(new Range(0L, (qubitQidx - 1L))) + new QArray<Pauli>()
                         {Pauli.PauliI}) + given_paulis?.Slice(new Range(qubitQidx, (given_paulis.Length - 1L))));
-#line 114 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 114 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         to_process[gate_set] = (new_oracle, new_paulis?.Copy(), 1L);
                     }
 
-#line 116 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 116 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     return to_process;
                 }
                 else
                 {
-#line 119 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 119 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     var termPR1 = new Microsoft.Quantum.Canon.GeneratorIndex(((idxTermType?.Copy(), new QArray<Double>()
                     {1D}), new QArray<Int64>(0L, (idxFermions[3L] - idxFermions[0L]))));
-#line 120 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 120 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     var to_process = _SplitJWPQTerm_.Apply((termPR1, new QArray<Qubit>()
                     {qubits[qubitQidx]}, qubits?.Slice(new Range(idxFermions[0L], idxFermions[3L]))));
-#line 121 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 121 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     foreach (var gate_set in new Range(0L, (to_process.Length - 1L)))
 #line hidden
                     {
-#line 122 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 122 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var (given_gate,given_paulis,value) = to_process[gate_set];
-#line 125 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 125 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var new_oracle = MicrosoftQuantumCanonApplyToSubregisterCA.Partial(new Func<QArray<Qubit>, (IUnitary,QArray<Int64>,QArray<Qubit>)>((__arg2__) => (given_gate, (MicrosoftQuantumCanonIntArrayFromRange.Apply(new Range(idxFermions[0L], idxFermions[3L])) + new QArray<Int64>()
                         {qubitQidx}), __arg2__)));
-#line 128 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 128 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var new_paulis = new QArray<Pauli>(qubits.Length);
-#line 131 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 131 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         new_paulis[qubitQidx] = Pauli.PauliZ;
-#line 134 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 134 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         var counter = 0L;
-#line 135 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 135 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         foreach (var pauli_index in new Range(idxFermions[0L], idxFermions[3L]))
 #line hidden
                         {
-#line 136 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 136 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                             new_paulis[pauli_index] = given_paulis[counter];
-#line 137 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 137 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                             counter = (counter + 1L);
                         }
 
-#line 140 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 140 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         to_process[gate_set] = (new_oracle, new_paulis?.Copy(), 1L);
                     }
 
-#line 142 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 142 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     return to_process;
                 }
             }
@@ -434,69 +434,69 @@ namespace MultiUnitary
         public override Func<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> Body => (__in__) =>
         {
             var (generatorIndex,qubits) = __in__;
-#line 148 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 148 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ((idxTermType,v0123),idxFermions) = generatorIndex.Data;
-#line 152 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 152 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitsPQ = MicrosoftQuantumCanonSubarray.Apply<QArray<Qubit>>((idxFermions?.Slice(new Range(0L, 1L)), qubits?.Copy()));
-#line 155 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 155 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitsRS = MicrosoftQuantumCanonSubarray.Apply<QArray<Qubit>>((idxFermions?.Slice(new Range(2L, 3L)), qubits?.Copy()));
-#line 158 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 158 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitsPQJW = qubits?.Slice(new Range((idxFermions[0L] + 1L), (idxFermions[1L] - 1L)));
-#line 161 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 161 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var qubitsRSJW = qubits?.Slice(new Range((idxFermions[2L] + 1L), (idxFermions[3L] - 1L)));
-#line 164 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 164 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ops = new QArray<QArray<Pauli>>(new QArray<Pauli>(Pauli.PauliX, Pauli.PauliX, Pauli.PauliX, Pauli.PauliX), new QArray<Pauli>(Pauli.PauliX, Pauli.PauliX, Pauli.PauliY, Pauli.PauliY), new QArray<Pauli>(Pauli.PauliX, Pauli.PauliY, Pauli.PauliX, Pauli.PauliY), new QArray<Pauli>(Pauli.PauliY, Pauli.PauliX, Pauli.PauliX, Pauli.PauliY), new QArray<Pauli>(Pauli.PauliY, Pauli.PauliY, Pauli.PauliY, Pauli.PauliY), new QArray<Pauli>(Pauli.PauliY, Pauli.PauliY, Pauli.PauliX, Pauli.PauliX), new QArray<Pauli>(Pauli.PauliY, Pauli.PauliX, Pauli.PauliY, Pauli.PauliX), new QArray<Pauli>(Pauli.PauliX, Pauli.PauliY, Pauli.PauliY, Pauli.PauliX));
-#line 173 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 173 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var out_hold = new QArray<(IUnitary,QArray<Pauli>,Int64)>(0L);
-#line 176 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 176 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             foreach (var idxOp in new Range(0L, (ops.Length - 1L)))
 #line hidden
             {
-#line 177 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 177 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 var total_gates = new QArray<Pauli>(qubits.Length);
-#line 179 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 179 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 var value = 1L;
-#line 181 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 181 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 if (((idxOp == 0L) || (idxOp == 5L)))
                 {
-#line 182 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 182 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     value = -(1L);
                 }
 
-#line 185 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 185 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 if (MicrosoftQuantumChemistryIsNotZero.Apply(v0123[(idxOp % 4L)]))
                 {
-#line 187 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 187 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     foreach (var op_index in new Range(0L, (ops[idxOp].Length - 1L)))
 #line hidden
                     {
-#line 189 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 189 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         total_gates[idxFermions[op_index]] = ops[idxOp][op_index];
                     }
 
-#line 193 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 193 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     foreach (var qubit_index in new Range((idxFermions[0L] + 1L), (idxFermions[1L] - 1L)))
 #line hidden
                     {
-#line 194 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 194 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         total_gates[qubit_index] = Pauli.PauliZ;
                     }
 
-#line 198 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 198 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     foreach (var qubit_index in new Range((idxFermions[1L] + 1L), (idxFermions[3L] - 1L)))
 #line hidden
                     {
-#line 199 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 199 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                         total_gates[qubit_index] = Pauli.PauliZ;
                     }
 
-#line 202 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 202 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                     out_hold = (out_hold + new QArray<(IUnitary,QArray<Pauli>,Int64)>()
                     {(MicrosoftQuantumCanonApplyPauli.Partial(new Func<QArray<Qubit>, (QArray<Pauli>,QArray<Qubit>)>((__arg1__) => (total_gates?.Copy(), __arg1__))), total_gates?.Copy(), value)});
                 }
             }
 
-#line 205 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 205 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             return out_hold;
         }
 
@@ -567,36 +567,36 @@ namespace MultiUnitary
         public override Func<(Microsoft.Quantum.Canon.GeneratorIndex,QArray<Qubit>), QArray<(IUnitary,QArray<Pauli>,Int64)>> Body => (__in__) =>
         {
             var (generatorIndex,qubits) = __in__;
-#line 210 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 210 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var ((idxTermType,idxDoubles),idxFermions) = generatorIndex.Data;
-#line 211 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 211 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             var termType = idxTermType[0L];
-#line 213 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 213 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
             if ((termType == 0L))
             {
-#line 215 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 215 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 return _SplitJWZTerm_.Apply((generatorIndex, qubits?.Copy()));
             }
             else if ((termType == 1L))
             {
-#line 219 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 219 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 return _SplitJWZZTerm_.Apply((generatorIndex, qubits?.Copy()));
             }
             else if ((termType == 2L))
             {
-#line 223 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 223 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 return _SplitPQandPQQRTerm_.Apply((generatorIndex, qubits?.Copy()));
             }
             else if ((termType == 3L))
             {
-#line 227 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 227 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 return _SplitJW0123Term_.Apply((generatorIndex, qubits?.Copy()));
             }
             else
             {
-#line 230 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 230 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 Message.Apply("OTHER IS INVOLVED");
-#line 231 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
+#line 231 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\MultiUnitary.qs"
                 return new QArray<(IUnitary,QArray<Pauli>,Int64)>(0L);
             }
         }

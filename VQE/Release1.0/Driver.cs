@@ -22,8 +22,8 @@ namespace VQE
             #region Parameters of Operation
             // filename of the molecule to be emulated 
 
-            var FILENAME = "h2_2_sto6g_1.0au.yaml";
-            // var FILENAME = "h4_sto6g_0.000.yaml";
+            // var FILENAME = "h2_2_sto6g_1.0au.yaml";
+            var FILENAME = "h4_sto6g_0.000.yaml";
             // var FILENAME = "h20_nwchem.yaml";
 
             // use this state provided in the YAML.
