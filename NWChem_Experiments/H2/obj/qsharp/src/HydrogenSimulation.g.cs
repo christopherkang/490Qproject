@@ -4,10 +4,10 @@ using Microsoft.Quantum.Core;
 using Microsoft.Quantum.Primitive;
 using Microsoft.Quantum.Simulation.Core;
 
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByTrotterization\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H4/HydrogenSimulation.qs\",\"Position\":{\"Item1\":31,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":36}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qSharpData\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":38},\"Item2\":{\"Line\":1,\"Column\":48}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"nBitsPrecision\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":77},\"Item2\":{\"Line\":1,\"Column\":91}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"trotterStepSize\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":99},\"Item2\":{\"Line\":1,\"Column\":114}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"trotterOrder\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":125},\"Item2\":{\"Line\":1,\"Column\":137}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},{\"Case\":\"Int\"},{\"Case\":\"Double\"},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByTrotterization\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H4/HydrogenSimulation.qs\",\"Position\":{\"Item1\":31,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":36}},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByQubitization\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H4/HydrogenSimulation.qs\",\"Position\":{\"Item1\":70,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qSharpData\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":36},\"Item2\":{\"Line\":1,\"Column\":46}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"nBitsPrecision\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":75},\"Item2\":{\"Line\":1,\"Column\":89}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
-[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByQubitization\"},\"SourceFile\":\"C:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H4/HydrogenSimulation.qs\",\"Position\":{\"Item1\":70,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"Documentation\":[]}")]
+[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByTrotterization\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H2/HydrogenSimulation.qs\",\"Position\":{\"Item1\":31,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":36}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qSharpData\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":38},\"Item2\":{\"Line\":1,\"Column\":48}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"nBitsPrecision\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":77},\"Item2\":{\"Line\":1,\"Column\":91}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"trotterStepSize\"]},\"Type\":{\"Case\":\"Double\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":99},\"Item2\":{\"Line\":1,\"Column\":114}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"trotterOrder\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":125},\"Item2\":{\"Line\":1,\"Column\":137}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},{\"Case\":\"Int\"},{\"Case\":\"Double\"},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByTrotterization\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H2/HydrogenSimulation.qs\",\"Position\":{\"Item1\":31,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":36}},\"Documentation\":[]}")]
+[assembly: Microsoft.Quantum.QsCompiler.Attributes.CallableDeclaration("{\"Kind\":{\"Case\":\"Operation\"},\"QualifiedName\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByQubitization\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H2/HydrogenSimulation.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"SymbolRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"ArgumentTuple\":{\"Case\":\"QsTuple\",\"Fields\":[[{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"qSharpData\"]},\"Type\":{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":36},\"Item2\":{\"Line\":1,\"Column\":46}}}]},{\"Case\":\"QsTupleItem\",\"Fields\":[{\"VariableName\":{\"Case\":\"ValidName\",\"Fields\":[\"nBitsPrecision\"]},\"Type\":{\"Case\":\"Int\"},\"IsMutable\":false,\"HasLocalQuantumDependency\":false,\"Position\":{\"Case\":\"Null\"},\"Range\":{\"Item1\":{\"Line\":1,\"Column\":75},\"Item2\":{\"Line\":1,\"Column\":89}}}]}]]},\"Signature\":{\"TypeParameters\":[],\"ArgumentType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"UserDefinedType\",\"Fields\":[{\"Namespace\":\"Microsoft.Quantum.Chemistry.JordanWigner\",\"Name\":\"JordanWignerEncodingData\"}]},{\"Case\":\"Int\"}]]},\"ReturnType\":{\"Case\":\"TupleType\",\"Fields\":[[{\"Case\":\"Double\"},{\"Case\":\"Double\"}]]},\"SupportedFunctors\":[]},\"Documentation\":[]}")]
+[assembly: Microsoft.Quantum.QsCompiler.Attributes.SpecializationDeclaration("{\"Kind\":{\"Case\":\"QsBody\"},\"Parent\":{\"Namespace\":\"Microsoft.Quantum.Chemistry.Samples.Hydrogen\",\"Name\":\"GetEnergyByQubitization\"},\"SourceFile\":\"c:/Users/keepw/Documents/GitHub/490Qproject/NWChem_Experiments/H2/HydrogenSimulation.qs\",\"Position\":{\"Item1\":71,\"Item2\":4},\"HeaderRange\":{\"Item1\":{\"Line\":1,\"Column\":11},\"Item2\":{\"Line\":1,\"Column\":34}},\"Documentation\":[]}")]
 #line hidden
 namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
 {
@@ -61,22 +61,30 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             set;
         }
 
+        protected ICallable<String, QVoid> Message
+        {
+            get;
+            set;
+        }
+
         public override Func<(Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,Int64,Double,Int64), (Double,Double)> Body => (__in) =>
         {
             var (qSharpData,nBitsPrecision,trotterStepSize,trotterOrder) = __in;
-#line 36 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 36 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var (nSpinOrbitals,fermionTermData,statePrepData,energyOffset) = qSharpData.Data;
-#line 40 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 37 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
+            Message.Apply(String.Format("{0}", fermionTermData));
+#line 41 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var (nQubits,(rescaleFactor,oracle)) = MicrosoftQuantumChemistryJordanWignerTrotterStepOracle.Apply((qSharpData, trotterStepSize, trotterOrder));
-#line 44 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 45 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var statePrep = MicrosoftQuantumChemistryJordanWignerPrepareTrialState.Partial(new Func<QArray<Qubit>, (QArray<Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState>,QArray<Qubit>)>((_arg1) => (statePrepData?.Copy(), _arg1)));
-#line 48 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 49 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var phaseEstAlgorithm = MicrosoftQuantumCanonRobustPhaseEstimation.Partial(new Func<(Microsoft.Quantum.Canon.DiscreteOracle,QArray<Qubit>), (Int64,Microsoft.Quantum.Canon.DiscreteOracle,QArray<Qubit>)>((_arg2) => (nBitsPrecision, _arg2.Item1, _arg2.Item2)));
-#line 51 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 52 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var estPhase = MicrosoftQuantumCanonEstimateEnergy.Apply((nQubits, statePrep, oracle, phaseEstAlgorithm));
-#line 56 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 57 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var estEnergy = ((estPhase * rescaleFactor) + energyOffset);
-#line 59 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 60 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             return (estPhase, estEnergy);
         }
 
@@ -87,6 +95,7 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
             this.MicrosoftQuantumCanonRobustPhaseEstimation = this.Factory.Get<ICallable<(Int64,Microsoft.Quantum.Canon.DiscreteOracle,QArray<Qubit>), Double>>(typeof(Microsoft.Quantum.Canon.RobustPhaseEstimation));
             this.MicrosoftQuantumChemistryJordanWignerPrepareTrialState = this.Factory.Get<ICallable<(QArray<Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState>,QArray<Qubit>), QVoid>>(typeof(Microsoft.Quantum.Chemistry.JordanWigner.PrepareTrialState));
             this.MicrosoftQuantumChemistryJordanWignerTrotterStepOracle = this.Factory.Get<ICallable<(Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,Double,Int64), (Int64,(Double,IUnitary))>>(typeof(Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle));
+            this.Message = this.Factory.Get<ICallable<String, QVoid>>(typeof(Microsoft.Quantum.Primitive.Message));
         }
 
         public override IApplyData __dataIn((Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,Int64,Double,Int64) data) => new In(data);
@@ -156,19 +165,19 @@ namespace Microsoft.Quantum.Chemistry.Samples.Hydrogen
         public override Func<(Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData,Int64), (Double,Double)> Body => (__in) =>
         {
             var (qSharpData,nBitsPrecision) = __in;
-#line 75 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 76 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var (nSpinOrbitals,fermionTermData,statePrepData,energyOffset) = qSharpData.Data;
-#line 79 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 80 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var (nQubits,(oneNorm,oracle)) = MicrosoftQuantumChemistryJordanWignerQubitizationOracle.Apply(qSharpData);
-#line 83 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 84 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var statePrep = MicrosoftQuantumChemistryJordanWignerPrepareTrialState.Partial(new Func<QArray<Qubit>, (QArray<Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState>,QArray<Qubit>)>((_arg1) => (statePrepData?.Copy(), _arg1)));
-#line 87 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 88 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var phaseEstAlgorithm = MicrosoftQuantumCanonRobustPhaseEstimation.Partial(new Func<(Microsoft.Quantum.Canon.DiscreteOracle,QArray<Qubit>), (Int64,Microsoft.Quantum.Canon.DiscreteOracle,QArray<Qubit>)>((_arg2) => (nBitsPrecision, _arg2.Item1, _arg2.Item2)));
-#line 90 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 91 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var estPhase = MicrosoftQuantumCanonEstimateEnergy.Apply((nQubits, statePrep, oracle, phaseEstAlgorithm));
-#line 98 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 99 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             var estEnergy = ((MicrosoftQuantumExtensionsMathSin.Apply(estPhase) * oneNorm) + energyOffset);
-#line 101 "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\HydrogenSimulation.qs"
+#line 102 "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H2\\HydrogenSimulation.qs"
             return (estPhase, estEnergy);
         }
 
