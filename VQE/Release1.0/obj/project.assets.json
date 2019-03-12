@@ -6677,11 +6677,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\MolecularHydrogen.csproj",
-      "projectName": "MolecularHydrogen",
-      "projectPath": "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\MolecularHydrogen.csproj",
+      "projectUniqueName": "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\VQE.csproj",
+      "projectName": "VQE",
+      "projectPath": "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\VQE.csproj",
       "packagesPath": "C:\\Users\\keepw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\NWChem_Experiments\\H4\\obj\\",
+      "outputPath": "C:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
