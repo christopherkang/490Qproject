@@ -41,6 +41,8 @@ namespace VQE
         // This contains the data needed to construct specific terms
         let (ham_terms, nOrbitals) = create_generator(data);
 
+        Message($"{nOrbitals}");
+
         // start ground energy, phase, and index of the matrix
         mutable ground_energy = 1000.0;
         mutable ground_phase = 3.0;
