@@ -27,6 +27,33 @@ namespace VQE
         return (generatorSystem, nSpinOrbitals);
     }
 
+    operation Simulate_Variational (data : JordanWignerEncodingData, precision : Double, moe : Double, input: JordanWignerInputState[]) : Double {
+        // simulate a system given JW data, a precision to search over input parameter ansatz, and 
+        // a (currently ignored) margin of error to use when approximating the expectation value
+        //Message("BEGINNING SIMULATION");
+
+        let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
+
+        // Create the main data source (EvolutionGenerator) with which to feed the VQE
+        // This contains the data needed to construct specific terms
+        let (ham_terms, nOrbitals) = create_generator(data);
+
+        //Message($"{nOrbitals}");
+
+        // start ground energy, phase, and index of the matrix
+        mutable energy = 0.0;
+
+        // we will use nOrbitals number of qubits. Each qubit, therefore, represents an orbital
+        using (testQ = Qubit[nOrbitals]) {
+            //let initial_oracle = PrepareTrialState(statePrepData, _);
+            let initial_oracle = PrepareTrialState(input, _);
+            
+            // create an energy estimate, making sure to include the offset
+            set energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe) + energyOffset;
+        }
+        return energy;
+    }
+
     operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Double[][] {
         // simulate a system given JW data, a precision to search over input parameter ansatz, and 
         // a (currently ignored) margin of error to use when approximating the expectation value
