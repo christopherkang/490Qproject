@@ -1,3 +1,12 @@
+// MULTIUNITARY 
+// A TRANSFORMATION UTILITY FOR JORDAN-WIGNER H TERMS
+// WRITTEN BY CHRISTOPHER KANG AT THE UNIVERSITY OF WASHINGTON, SEATTLE
+// RELEASE 1.0 - MARCH 20TH, 2019
+// CSE 490Q - SVORE
+
+// MultiUnitary is a utility for our VQE package. It allows the conversion of H-terms into
+// an array of unitaries to find the expectation values.
+// This is modeled after the original JW Set
 namespace MultiUnitary {
     
     open Microsoft.Quantum.Primitive;
@@ -211,18 +220,23 @@ namespace MultiUnitary {
         let termType = idxTermType[0];
         
         if (termType == 0) {
+            // Message($"A term of type 0 is being used");
             return _SplitJWZTerm_(generatorIndex, qubits);
         }
         elif (termType == 1) {
+            // Message($"A term of type 1 is being used");
             return _SplitJWZZTerm_(generatorIndex, qubits);
         }
         elif (termType == 2) {
+            // Message($"A term of type 2 is being used");
             return _SplitPQandPQQRTerm_(generatorIndex, qubits);
         }
         elif (termType == 3) {
+            // Message($"A term of type 3 is being used");
             return _SplitJW0123Term_(generatorIndex, qubits);
         }
         else {
+            Message($"OTHER IS INVOLVED");
             return new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
         }
     } 
