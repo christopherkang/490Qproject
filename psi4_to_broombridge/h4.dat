@@ -80,10 +80,16 @@ def extract_fields(mol, scf, scf_corr_en, fci, ccsd):
     else:
       ccsd_en, ccsd_wfn = psi4.energy('ccsd', molecule=mol, return_wfn=True)
 
-    # one and two electron integrals
+    # one electron integrals
     mints = psi4.core.MintsHelper(ccsd_wfn.basisset())
-    one_elec = np.array(ccsd_wfn.H())
-    two_elec = np.array(mints.ao_eri())
+    one_elec = ccsd_wfn.H()
+    # turn it into MO basis
+    one_elec.transform(ccsd_wfn.Ca())
+    # two electron integral in MO basis
+    two_elec = mints.mo_eri(ccsd_wfn.Ca(), ccsd_wfn.Ca(), ccsd_wfn.Ca(), ccsd_wfn.Ca())
+    # turn them into numpy arrays
+    one_elec = np.array(one_elec)
+    two_elec = np.array(two_elec)
 
     data = {}
     data['format'] = {'version' : '0.1'}
@@ -228,7 +234,6 @@ def to_broombridge(mol, name=None, scf=None, scf_corr_en=None, fci=None, ccsd=No
     else:
         assert False, "Unreachable code"
     print("output written to:", name)
-
 
 
 to_broombridge(h4, 'h4.yaml')
