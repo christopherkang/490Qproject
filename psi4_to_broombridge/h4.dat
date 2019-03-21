@@ -40,14 +40,13 @@ preamble="""
 "$schema": https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/broombridge-0.1.schema.json
 """
 
-def extract_fields(mol, scf, scf_corr_en, fci, ccsd):
+def extract_fields(mol, scf=None, scf_corr_en=None, fci=None, ccsd=None):
     # get basis set of first atom
     #basis = mol.basis_on_atom(0)
-    # set all atoms to same basis set (we need a unified basis for yaml)
+    # set all atoms to same basis set
     #mol.set_basis_all_atoms(basis)
 
     # get the geometry in bohr units
-    # TODO: change geometry to appropriate units (angstrom, a.u.)
     geom = np.array(mol.geometry())
     symm = mol.symmetry_from_input()
 
@@ -110,7 +109,7 @@ def extract_fields(mol, scf, scf_corr_en, fci, ccsd):
             'name' : mol.symbol(i),
             'coords' : [geom.item((i, 0)), geom.item((i, 1)), geom.item((i, 2))]
         })
-    # coulomb repulsion === nuclear repulsion energy
+    # coulomb repulsion = nuclear repulsion energy
     coulomb_repulsion = {
         'units' : 'hartree',
         'value' : mol.nuclear_repulsion_energy()
@@ -130,7 +129,7 @@ def extract_fields(mol, scf, scf_corr_en, fci, ccsd):
     one_electron_integrals = {
         'units' : 'hartree',
         'format' : 'sparse',
-        'values' : [] # TODO
+        'values' : []
     }
     N, _ = one_elec.shape
     for i in range(N):
@@ -145,7 +144,7 @@ def extract_fields(mol, scf, scf_corr_en, fci, ccsd):
         'units' : 'hartree',
         'format' : 'sparse',
         'index_convention' : 'mulliken',
-        'values' : [] # TODO
+        'values' : []
     }
     N, _, _, _ = two_elec.shape
     # mulliken index convention:
@@ -166,8 +165,8 @@ def extract_fields(mol, scf, scf_corr_en, fci, ccsd):
                     ])
     n_electrons_alpha = alpha
     basis_set = {
-        'name' : 'unknown', # placeholder
-        'type' : 'gaussian' # placeholder
+        'name' : 'unknown',
+        'type' : 'gaussian'
     }
     n_electrons_beta = beta
     n_orbitals = orbitals
@@ -234,6 +233,7 @@ def to_broombridge(mol, name=None, scf=None, scf_corr_en=None, fci=None, ccsd=No
     else:
         assert False, "Unreachable code"
     print("output written to:", name)
+
 
 
 to_broombridge(h4, 'h4.yaml')

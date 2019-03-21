@@ -34,7 +34,7 @@ def extract_fields(mol, scf=None, scf_corr_en=None, fci=None, ccsd=None):
     if scf is None or scf_corr_en is None:
       scf_en, scf_wfn = psi4.energy('scf', molecule=mol, return_wfn=True)
       # energy offset
-      scf_corr_en = psi4.scalar_variable('CURRENT CORRELATION ENERGY')
+      scf_corr_en = psi4.core.scalar_variable('CURRENT CORRELATION ENERGY')
     else:
       scf_en, scf_wfn = scf
 
