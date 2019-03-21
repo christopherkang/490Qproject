@@ -1,0 +1,11 @@
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/obj/Debug/netcoreapp2.0/PrepareStateMLE.csprojAssemblyReference.cache
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/obj/Debug/netcoreapp2.0/PrepareStateMLE.csproj.CoreCompileInputs.cache
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/obj/Debug/netcoreapp2.0/PrepareStateMLE.AssemblyInfoInputs.cache
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/obj/Debug/netcoreapp2.0/PrepareStateMLE.AssemblyInfo.cs
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/bin/Debug/netcoreapp2.0/PrepareStateMLE.deps.json
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/bin/Debug/netcoreapp2.0/PrepareStateMLE.runtimeconfig.json
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/bin/Debug/netcoreapp2.0/PrepareStateMLE.runtimeconfig.dev.json
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/bin/Debug/netcoreapp2.0/PrepareStateMLE.dll
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/bin/Debug/netcoreapp2.0/PrepareStateMLE.pdb
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/obj/Debug/netcoreapp2.0/PrepareStateMLE.dll
+/Users/Julian/polybox/490Qproject/PrepareStateMLE/obj/Debug/netcoreapp2.0/PrepareStateMLE.pdb
