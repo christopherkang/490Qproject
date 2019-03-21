@@ -2,6 +2,7 @@
 // AUTHOR: CHRISTOPHER KANG, UNIVERSITY OF WASHINGTON
 // 490Q, KRYSTA SVORE, WI 2019
 
+// This file defines critical methods for VQE simulation. 
 namespace VQE
 {
     open Microsoft.Quantum.Canon;
@@ -27,7 +28,7 @@ namespace VQE
         return (generatorSystem, nSpinOrbitals);
     }
 
-    operation Simulate_Variational (data : JordanWignerEncodingData, precision : Double, moe : Double, input: JordanWignerInputState[]) : Double {
+    operation Simulate_Variational (data : JordanWignerEncodingData, moe : Double, input: JordanWignerInputState[]) : Double {
         // simulate a system given JW data, a precision to search over input parameter ansatz, and 
         // a (currently ignored) margin of error to use when approximating the expectation value
         //Message("BEGINNING SIMULATION");
@@ -54,10 +55,14 @@ namespace VQE
         return energy;
     }
 
-    operation Simulate (data : JordanWignerEncodingData, precision : Double, moe : Double) : Double[][] {
-        // simulate a system given JW data, a precision to search over input parameter ansatz, and 
-        // a (currently ignored) margin of error to use when approximating the expectation value
-        Message("BEGINNING SIMULATION");
+    operation Simulate (data : JordanWignerEncodingData, moe : Double, runs : Int) : Double[][] {
+        // Simulate a system given JW data and a margin of error to use 
+        // when approximating the expectation value. Note the margin of error caps the # of runs to 50,
+        // (so each unitary only has 50 runs to estimate the expectation value) to prevent 
+        // exponential numbers of runs.
+        // This method is allows the direct simulation of a specific ground state energy, provided 
+        // the Hamiltonian data includes the info
+        // Message("BEGINNING SIMULATION");
 
         let (nSpinOrbitals, fermionTermData, statePrepData, energyOffset) = data!;
 
@@ -77,12 +82,12 @@ namespace VQE
 
         // we will use nOrbitals number of qubits. Each qubit, therefore, represents an orbital
         using (testQ = Qubit[nOrbitals]) {
-            mutable phi = 0.0;
+            mutable run_num = 0;
             repeat {
                 mutable temp_out_array = new Double[][1];
-                Message($"Testing phase: {phi}");
+                // Message($"Testing phase: {run_num}");
 
-                Message($"{energyOffset}");
+                // Message($"{energyOffset}");
 
                 // create the oracle that creates the initial state
                 // let initial_oracle = NoOp<Qubit[]>;
@@ -93,33 +98,33 @@ namespace VQE
                 let discovered_energy = SumExpectedValues(initial_oracle, ham_terms, testQ, moe) + energyOffset;
                 
                 // set the specific row to have the initial state given + the energy prediction
-                set temp_out_array[0] = [phi, discovered_energy];
+                set temp_out_array[0] = [ToDouble(run_num), discovered_energy];
 
                 // add it to our output array
                 set out_val = out_val + temp_out_array;
 
                 // if the energy found is lower than the previous low
-                if (discovered_energy < ground_energy) {
+                // if (discovered_energy < ground_energy) {
 
-                    // reset the low energy amount + reset the low energy parameter
-                    set ground_energy = discovered_energy;
-                    set ground_phase = phi;
-                }
+                //     // reset the low energy amount + reset the low energy parameter
+                //     set ground_energy = discovered_energy;
+                //     set ground_phase = ToDouble(run_num);
+                // }
 
-                Message($"ENERGY FOUND: {discovered_energy}");
+                // Message($"ENERGY FOUND: {discovered_energy}");
 
                 // increment the index for the output matrix
                 set index = index + 1;
 
-                // increase the angle
-                set phi = phi + precision;
-            } until (phi >= 20.0)
+                // increase the run number
+                set run_num = run_num + 1;
+            } until (run_num >= runs)
             fixup {
 
             }
         }
-        Message($"Ground energy: {ground_energy}");
-        Message($"Ground state: {ground_phase}");
+        // Message($"Ground energy: {ground_energy}");
+        // Message($"Ground state: {ground_phase}");
         return out_val;
     }
 
@@ -145,7 +150,7 @@ namespace VQE
 
         // we now iterate through each of the terms
         for (i in 0..num_of_terms - 1) {
-            Message($"Completed term: {i + 1} / {num_of_terms}. Current total: {total}");
+            // Message($"Completed term: {i + 1} / {num_of_terms}. Current total: {total}");
             // and take the specified term (which is of type GeneratorIndex)
             let jw_term = jw_term_indexer(i);
 

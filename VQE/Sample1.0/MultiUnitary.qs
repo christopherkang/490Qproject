@@ -1,3 +1,12 @@
+// MULTIUNITARY 
+// A TRANSFORMATION UTILITY FOR JORDAN-WIGNER H TERMS
+// WRITTEN BY CHRISTOPHER KANG AT THE UNIVERSITY OF WASHINGTON, SEATTLE
+// RELEASE 1.0 - MARCH 20TH, 2019
+// CSE 490Q - SVORE
+
+// MultiUnitary is a utility for our VQE package. It allows the conversion of H-terms into
+// an array of unitaries to find the expectation values.
+// This is modeled after the original JW Set
 namespace MultiUnitary {
     
     open Microsoft.Quantum.Primitive;

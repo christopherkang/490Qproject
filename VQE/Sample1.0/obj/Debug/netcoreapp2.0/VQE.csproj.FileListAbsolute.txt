@@ -1,23 +1,12 @@
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.deps.json
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.runtimeconfig.json
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.runtimeconfig.dev.json
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.dll
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.pdb
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.csprojAssemblyReference.cache
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.csproj.CoreCompileInputs.cache
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.AssemblyInfoInputs.cache
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.AssemblyInfo.cs
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.dll
-C:/Users/keepw/Documents/GitHub/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.pdb
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.deps.json
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.runtimeconfig.json
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.runtimeconfig.dev.json
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.dll
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/VQE.pdb
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.csprojAssemblyReference.cache
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.csproj.CoreCompileInputs.cache
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.AssemblyInfoInputs.cache
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.AssemblyInfo.cs
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.dll
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/obj/Debug/netcoreapp2.0/VQE.pdb
-/Users/Robert/Desktop/Computer Science/490Q/QuantChemFinal/490Qproject/VQE/Release1.0/bin/Debug/netcoreapp2.0/Accord.dll.config
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\Accord.dll.config
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.deps.json
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.runtimeconfig.json
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.runtimeconfig.dev.json
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.dll
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.pdb
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.csprojAssemblyReference.cache
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.csproj.CoreCompileInputs.cache
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.AssemblyInfoInputs.cache
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.AssemblyInfo.cs
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.dll
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.pdb
