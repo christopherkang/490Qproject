@@ -211,18 +211,23 @@ namespace MultiUnitary {
         let termType = idxTermType[0];
         
         if (termType == 0) {
+            // Message($"A term of type 0 is being used");
             return _SplitJWZTerm_(generatorIndex, qubits);
         }
         elif (termType == 1) {
+            // Message($"A term of type 1 is being used");
             return _SplitJWZZTerm_(generatorIndex, qubits);
         }
         elif (termType == 2) {
+            // Message($"A term of type 2 is being used");
             return _SplitPQandPQQRTerm_(generatorIndex, qubits);
         }
         elif (termType == 3) {
+            // Message($"A term of type 3 is being used");
             return _SplitJW0123Term_(generatorIndex, qubits);
         }
         else {
+            Message($"OTHER IS INVOLVED");
             return new ((Qubit[] => Unit : Adjoint, Controlled), Pauli[], Int)[0];
         }
     } 
