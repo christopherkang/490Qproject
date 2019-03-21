@@ -14,6 +14,10 @@ using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime;
 
 // This driver runs the Variational Quantum Eigensolver
+// The implementation is based off of the paper by Peruzzo:
+// "A variational eigenvalue solver on a quantum processor"
+// Reading this will be enormously helpful in understanding the logic behind 
+// the operations code and ansatz preparation
 
 // The user will be prompted to type "QE" or "VQE"
 
@@ -51,7 +55,7 @@ namespace VQE
             // filename of the molecule to be emulated 
             var FILENAME = "h20_nwchem.yaml";
 
-            // use this state provided in the YAML.
+            // suggested state to include in JW Terms
             var STATE = "|G>";
 
             // the margin of error to use when approximating the expected value 
@@ -61,9 +65,6 @@ namespace VQE
             // if you'd like to change this parameter, feel free to edit the repeat/until loop
             // in the "FindExpectedValue" method
             var MOE = 0.1;
-
-            // Communicates to the user what state, margin of error, and precision are being used
-            Console.WriteLine($"STATE: {STATE} | MOE: {MOE} ");
 
             #endregion
 
@@ -97,6 +98,8 @@ namespace VQE
                 if (runString.Equals("VQE"))
                 {
                     string useGroundState;
+
+                    // we begin by asking whether to use the YAML suggested ground or an ansatz
                     Console.Write("Use ground state? (yes or no): ");
                     useGroundState = Console.ReadLine();
 
@@ -104,6 +107,7 @@ namespace VQE
                     var statePrepData = data.Item3;
                     var N = statePrepData.Length;
 
+                    // We'd like to have a method to create an input state given parameters
                     // method to convert optimized parameters, i.e. the
                     // coefficients of the creation/annihilation operators
                     // to JordanWignerInputStates that can be run in the 
