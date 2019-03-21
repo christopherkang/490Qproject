@@ -1,0 +1,11 @@
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/obj/Debug/netcoreapp2.0/ResourceEstimation.csprojAssemblyReference.cache
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/obj/Debug/netcoreapp2.0/ResourceEstimation.csproj.CoreCompileInputs.cache
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/bin/Debug/netcoreapp2.0/ResourceEstimation.deps.json
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/bin/Debug/netcoreapp2.0/ResourceEstimation.runtimeconfig.json
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/bin/Debug/netcoreapp2.0/ResourceEstimation.runtimeconfig.dev.json
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/bin/Debug/netcoreapp2.0/ResourceEstimation.dll
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/bin/Debug/netcoreapp2.0/ResourceEstimation.pdb
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/obj/Debug/netcoreapp2.0/ResourceEstimation.AssemblyInfoInputs.cache
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/obj/Debug/netcoreapp2.0/ResourceEstimation.AssemblyInfo.cs
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/obj/Debug/netcoreapp2.0/ResourceEstimation.dll
+/Users/Julian/polybox/490Qproject/VQE/ResourceEstimation/obj/Debug/netcoreapp2.0/ResourceEstimation.pdb
