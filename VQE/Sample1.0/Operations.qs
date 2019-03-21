@@ -76,8 +76,8 @@ namespace VQE
         Message($"{nOrbitals}");
 
         // start ground energy, phase, and index of the matrix
-        mutable ground_energy = 1000.0;
-        mutable ground_phase = 3.0;
+        // mutable ground_energy = 1000.0;
+        // mutable ground_phase = 3.0;
         mutable index = 0;
 
         // we will use nOrbitals number of qubits. Each qubit, therefore, represents an orbital
