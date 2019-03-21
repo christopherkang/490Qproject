@@ -6794,11 +6794,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\VQE.csproj",
+      "projectUniqueName": "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\_Legacy\\Release1.0\\VQE.csproj",
       "projectName": "VQE",
-      "projectPath": "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\VQE.csproj",
+      "projectPath": "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\_Legacy\\Release1.0\\VQE.csproj",
       "packagesPath": "C:\\Users\\keepw\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\VQE\\Release1.0\\obj\\",
+      "outputPath": "c:\\Users\\keepw\\Documents\\GitHub\\490Qproject\\_Legacy\\Release1.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
