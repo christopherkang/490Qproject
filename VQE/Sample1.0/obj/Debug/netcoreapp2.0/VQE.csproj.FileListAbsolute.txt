@@ -1,0 +1,11 @@
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.deps.json
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.runtimeconfig.json
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.runtimeconfig.dev.json
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.dll
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\bin\Debug\netcoreapp2.0\VQE.pdb
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.csprojAssemblyReference.cache
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.csproj.CoreCompileInputs.cache
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.AssemblyInfoInputs.cache
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.AssemblyInfo.cs
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.dll
+C:\Users\keepw\Documents\GitHub\490Qproject\VQE\Sample1.0\obj\Debug\netcoreapp2.0\VQE.pdb

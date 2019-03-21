@@ -7,6 +7,8 @@ using Microsoft.Quantum.Chemistry;
 using System.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
+using Accord.Math.Optimization;
+using Microsoft.Quantum.Chemistry.JordanWigner;
 using Microsoft.Extensions.Logging;
 
 using System.IO;
@@ -19,12 +21,15 @@ namespace VQE
     {
         static void Main(string[] args)
         {
+            Console.Write("Run QE or VQE? ");
+            String runString = Console.ReadLine();
+
             #region Parameters of Operation
             // filename of the molecule to be emulated 
 
             // var FILENAME = "h2_2_sto6g_1.0au.yaml";
-            var FILENAME = "h4_sto6g_0.000.yaml";
-            // var FILENAME = "h20_nwchem.yaml";
+            // var FILENAME = "h4_sto6g_0.000.yaml";
+            var FILENAME = "h20_nwchem.yaml";
 
             // use this state provided in the YAML.
             var STATE = "|G>";
@@ -52,27 +57,66 @@ namespace VQE
 
             var data = JWEncoding.QSharpData(STATE);
 
-            // Console.WriteLine("----- Print Hamiltonian");
-            // Console.Write(hamiltonian);
-            // Console.WriteLine("----- End Print Hamiltonian \n");
-
             #endregion
             #region Hybrid Quantum/Classical accelerator
             // Feed created state and hamiltonian terms to VQE
-            Console.WriteLine("----- Begin VQE Simulation");
+            if (runString.Equals("VQE")) {
+                Console.WriteLine("----- Begin VQE Simulation");
+            } else {
+                Console.WriteLine("----- Begin QE Simulation");
+            }
 
-            //var N = 10; // number of qubits, calculate from data???
-            //var oneReal = (1.0, 0.0);
-            //var inputCoeffs = new ComplexPolar[N];
-            //for (int i = 0; i < Length(inputCoeffs) - 1; i++)
-            // {
-            //     inputCoeffs[i] = oneReal;
-            // }
             using (var qsim = new QuantumSimulator())
             {
-                // Simulate.Run(qsim).Wait();
-                // Console.WriteLine(arbitrary_test.Run(qsim, data).Result);
-                Console.WriteLine(Simulate.Run(qsim, data, 1.0, MOE).Result);
+                if (runString.Equals("VQE")) {
+                    string useGroundState;
+                    Console.Write("Use ground state? (yes or no): ");
+                    useGroundState = Console.ReadLine();
+
+                    var statePrepData = data.Item3; // statePrep data
+                    var N = statePrepData.Length;
+                    
+                    double convertDoubleArrToJWInputStateArr (double[] x) {
+                        var JWInputStateArr = new QArray<JordanWignerInputState>();
+                        for (int i = 0; i < N; i++) {
+                            var currJWInputState = statePrepData[i];
+                            var positions = currJWInputState.Item2;
+                            JWInputStateArr.Add(new JordanWignerInputState(((x[i], 0.0), positions)));
+                        }
+                        return Simulate_Variational.Run(qsim, data, 1.0, MOE, JWInputStateArr).Result;
+                    }  
+
+                    Func<double[], double> Simulate_Wrapper = (double[] x) => convertDoubleArrToJWInputStateArr(x);
+
+                    var solver = new NelderMead((int) N, Simulate_Wrapper);
+
+                    // create initial condition vector
+                    var initialConds = new double[N];
+                    for (int i = 0; i < N; i++) {
+                        if (useGroundState.Equals("yes")) {
+                            var currJWInputState = statePrepData[i];
+                            var groundStateGuess = currJWInputState.Item1;
+                            initialConds[i] = groundStateGuess.Item1;
+                        } else {
+                            initialConds[i] = 0.0;
+                        }
+                    }
+
+                    // Now, we can minimize it with:
+                    bool success = solver.Minimize(initialConds);
+
+                    // And get the solution vector using
+                    double[] solution = solver.Solution; 
+
+                    // The minimum at this location would be:
+                    double minimum = solver.Value;
+
+                    Console.WriteLine($"Solution converged: {success}");
+                    Console.WriteLine("The solution is: " + String.Join(" ", solution));
+                    Console.WriteLine($"The minimum is: {minimum}");
+                } else {
+                    Console.WriteLine(Simulate.Run(qsim, data, 1.0, MOE).Result);
+                }
             }
             #endregion 
             #region Classical update scheme
