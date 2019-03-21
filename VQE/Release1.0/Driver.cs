@@ -69,6 +69,9 @@ namespace VQE
             using (var qsim = new QuantumSimulator())
             {
                 if (runString.Equals("VQE")) {
+                    string useGroundState;
+                    Console.Write("Use ground state? (yes or no): ");
+                    useGroundState = Console.ReadLine();
 
                     var statePrepData = data.Item3; // statePrep data
                     var N = statePrepData.Length;
@@ -85,13 +88,22 @@ namespace VQE
 
                     Func<double[], double> Simulate_Wrapper = (double[] x) => convertDoubleArrToJWInputStateArr(x);
 
-                    var solver = new NelderMead(numberOfVariables: (int) N)
-                    {
-                        Function = Simulate_Wrapper
-                    };
+                    var solver = new NelderMead((int) N, Simulate_Wrapper);
+
+                    // create initial condition vector
+                    var initialConds = new double[N];
+                    for (int i = 0; i < N; i++) {
+                        if (useGroundState.Equals("yes")) {
+                            var currJWInputState = statePrepData[i];
+                            var groundStateGuess = currJWInputState.Item1;
+                            initialConds[i] = groundStateGuess.Item1;
+                        } else {
+                            initialConds[i] = 0.0;
+                        }
+                    }
 
                     // Now, we can minimize it with:
-                    bool success = solver.Minimize();
+                    bool success = solver.Minimize(initialConds);
 
                     // And get the solution vector using
                     double[] solution = solver.Solution; 
